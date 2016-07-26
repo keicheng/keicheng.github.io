@@ -2629,10 +2629,23 @@ var nowData = data.slice(0);
 $(function() {
     var $tbody = $('.verbs'),
         $sortBtns = $('.js-sort'),
-        $filter = $('.js-filter');
+        $filter = $('.js-filter'),
+        $tableWrap = $('.table-responsive-scroll'),
+        $emptyTip = $('.empty-tip'),
+        $badge = $('.badge');
 
     function getOneWord(word) {
         return word.split(' ')[0];
+    }
+
+    function showEmptyBlock() {
+        $tableWrap.addClass('hide');
+        $emptyTip.removeClass('hide');
+    }
+
+    function hideEmptyBlock() {
+        $tableWrap.removeClass('hide')
+        $emptyTip.addClass('hide');;
     }
 
     function makeRow(_data) {
@@ -2651,6 +2664,10 @@ $(function() {
         $tr.append(htmlstr);
     }
 
+    function rowCounter(num) {
+        $badge.text(num);
+    }
+
     function _shuffle() {
         var num = Math.random() > 0.5 ? -1 : 1;
         return num;
@@ -2659,17 +2676,19 @@ $(function() {
     function _order(_data, filter) {
         var no = 1;
 
-        filter = filter || false;
+        if (_data.length) {
+            filter = filter || false;
 
-        if (filter === 'left') _data = _data.slice(0, 55);
-        if (filter === 'right') _data = _data.slice(55, 110);
+            nowData = _data;
 
-        nowData = _data;
+            $.each(nowData, function(index, value) {
+                makeRow(value);
+            });
 
-        $.each(_data, function(index, value) {
-            makeRow(value);
-        });
-
+            rowCounter(nowData.length);
+        } else {
+            showEmptyBlock();
+        }
     }
 
     function _random() {
@@ -2687,18 +2706,38 @@ $(function() {
             if (filter.length == 1) {
                 if (value.filter === filter) tmpData.push(value);
             } else {
-                if (value.book) tmpData.push(value);
+                if ((filter === 'book' || filter === 'left' || filter === 'right') && value.book) {
+                    tmpData.push(value);
+                }
             }
         });
 
-        if (random) {
-            tmpData = tmpData.sort(_shuffle);
-        }
+        if (filter === 'left') tmpData = tmpData.slice(0, 55);
+        if (filter === 'right') tmpData = tmpData.slice(55, 110);
+        if (random) tmpData = tmpData.sort(_shuffle);
 
         return tmpData;
     }
 
-    _order(data);
+    function init() {
+        var tmpData = [],
+            hash = window.location.hash;
+
+        if (hash.length) {
+            hash = hash.split('#')[1];
+
+            if (hash != '*') tmpData = _filter(hash);
+
+            $filter.children('option[value="' + hash + '"]').prop('selected', true);
+
+        } else {
+            tmpData = data.slice(0);
+        }
+
+        _order(tmpData);
+    }
+
+    init();
 
     $sortBtns.on('click', function(e) {
         e.preventDefault();
@@ -2736,7 +2775,8 @@ $(function() {
         $tbody.children('tr').remove();
 
         var that = $(this),
-            thatFilterWord = that.val();
+            thatFilterWord = that.val(),
+            hash = '',
             getFilterData = function() {
                 if (thatFilterWord.length > 1) {
                     return _filter(thatFilterWord);
@@ -2746,7 +2786,9 @@ $(function() {
             };
 
         nowData = getFilterData();
+        hash = (thatFilterWord === '*') ? window.location.pathname : '#' + thatFilterWord;
 
         _order(nowData, thatFilterWord);
+        window.history.pushState('', document.title, hash);
     });
 });

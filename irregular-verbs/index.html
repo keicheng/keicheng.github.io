@@ -34,11 +34,9 @@
             }
 
             .filter {
-                margin-bottom: 10px;
-            }
-
-            .filter .btn {
-                margin-bottom: 10px;
+                display: inline-block;
+                margin: 0 10px 10px;
+                vertical-align: top;
             }
 
             .verbs td {
@@ -75,43 +73,50 @@
                 display: inline-block;
                 max-width: 200px;
             }
+
+            .badge {
+                margin-top: 9px;
+            }
         </style>
     </head>
     <body>
         <div class="wrap align-center">
             <h2>不規則動詞三態表</h2>
-            <div class="btn-grp">
-                <a class="btn js-sort color-primary" data-sort="order">依字母排列</a>
-                <a class="btn js-sort" data-sort="random">亂數排列</a>
-            </div>
-            <div class="filter">
-                <select class="ctrl-input filter-select js-filter">
-                    <option value="*">All</option>
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                    <option value="c">C</option>
-                    <option value="d">D</option>
-                    <option value="e">E</option>
-                    <option value="f">F</option>
-                    <option value="g">G</option>
-                    <option value="h">H</option>
-                    <option value="i">I</option>
-                    <option value="j">J</option>
-                    <option value="k">K</option>
-                    <option value="l">L</option>
-                    <option value="m">M</option>
-                    <option value="o">O</option>
-                    <option value="p">P</option>
-                    <option value="q">Q</option>
-                    <option value="r">R</option>
-                    <option value="s">S</option>
-                    <option value="t">T</option>
-                    <option value="u">U</option>
-                    <option value="w">W</option>
-                    <option value="book">Book</option>
-                    <option value="left">Book Left</option>
-                    <option value="right">Book Right</option>
-                </select>
+            <div class="nav">
+                <div class="btn-grp">
+                    <a class="btn js-sort color-primary" data-sort="order">依字母排列</a>
+                    <a class="btn js-sort" data-sort="random">亂數排列</a>
+                </div>
+                <div class="filter">
+                    <select class="ctrl-input filter-select js-filter">
+                        <option value="*">所有不規則動詞</option>
+                        <option value="a">A 字首動詞</option>
+                        <option value="b">B 字首動詞</option>
+                        <option value="c">C 字首動詞</option>
+                        <option value="d">D 字首動詞</option>
+                        <option value="e">E 字首動詞</option>
+                        <option value="f">F 字首動詞</option>
+                        <option value="g">G 字首動詞</option>
+                        <option value="h">H 字首動詞</option>
+                        <option value="i">I 字首動詞</option>
+                        <option value="j">J 字首動詞</option>
+                        <option value="k">K 字首動詞</option>
+                        <option value="l">L 字首動詞</option>
+                        <option value="m">M 字首動詞</option>
+                        <option value="o">O 字首動詞</option>
+                        <option value="p">P 字首動詞</option>
+                        <option value="q">Q 字首動詞</option>
+                        <option value="r">R 字首動詞</option>
+                        <option value="s">S 字首動詞</option>
+                        <option value="t">T 字首動詞</option>
+                        <option value="u">U 字首動詞</option>
+                        <option value="w">W 字首動詞</option>
+                        <option value="book">課本全部動詞</option>
+                        <option value="left">課本左半部</option>
+                        <option value="right">課本右半部</option>
+                    </select>
+                </div>
+                <span class="badge"></span>
             </div>
             <div class="table-responsive-scroll">
                 <table class="table table-definition align-center">
@@ -126,6 +131,7 @@
                     <tbody class="verbs"></tbody>
                 </table>
             </div>
+            <div class="empty-tip hide"><p>沒有任何資料</p></div>
         </div>
         <div class="footer">
             Made by <a href="https://www.facebook.com/kule.tw" target="_blank">Kei™</a>
