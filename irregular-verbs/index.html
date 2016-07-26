@@ -23,7 +23,7 @@
         <!--Javascript-->
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.160704/js/kule.urbrowser.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/verbs.js"></script>
+        <script type="text/javascript" src="js/verbs.min.js"></script>
         <style>
             .wrap {
                 padding: 20px 0;
@@ -70,6 +70,11 @@
                 text-align: center;
                 font-size: 14px;
             }
+
+            .filter-select {
+                display: inline-block;
+                max-width: 200px;
+            }
         </style>
     </head>
     <body>
@@ -80,34 +85,38 @@
                 <a class="btn js-sort" data-sort="random">亂數排列</a>
             </div>
             <div class="filter">
-                <a class="btn js-filter active color-success" data-filter="*">*</a>
-                <a class="btn js-filter" data-filter="a">A</a>
-                <a class="btn js-filter" data-filter="b">B</a>
-                <a class="btn js-filter" data-filter="c">C</a>
-                <a class="btn js-filter" data-filter="d">D</a>
-                <a class="btn js-filter" data-filter="e">E</a>
-                <a class="btn js-filter" data-filter="f">F</a>
-                <a class="btn js-filter" data-filter="g">G</a>
-                <a class="btn js-filter" data-filter="h">H</a>
-                <a class="btn js-filter" data-filter="i">I</a>
-                <a class="btn js-filter" data-filter="j">J</a>
-                <a class="btn js-filter" data-filter="k">K</a>
-                <a class="btn js-filter" data-filter="l">L</a>
-                <a class="btn js-filter" data-filter="m">M</a>
-                <a class="btn js-filter" data-filter="o">O</a>
-                <a class="btn js-filter" data-filter="p">P</a>
-                <a class="btn js-filter" data-filter="q">Q</a>
-                <a class="btn js-filter" data-filter="r">R</a>
-                <a class="btn js-filter" data-filter="s">S</a>
-                <a class="btn js-filter" data-filter="t">T</a>
-                <a class="btn js-filter" data-filter="u">U</a>
-                <a class="btn js-filter" data-filter="w">W</a>
+                <select class="ctrl-input filter-select js-filter">
+                    <option value="*">All</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                    <option value="e">E</option>
+                    <option value="f">F</option>
+                    <option value="g">G</option>
+                    <option value="h">H</option>
+                    <option value="i">I</option>
+                    <option value="j">J</option>
+                    <option value="k">K</option>
+                    <option value="l">L</option>
+                    <option value="m">M</option>
+                    <option value="o">O</option>
+                    <option value="p">P</option>
+                    <option value="q">Q</option>
+                    <option value="r">R</option>
+                    <option value="s">S</option>
+                    <option value="t">T</option>
+                    <option value="u">U</option>
+                    <option value="w">W</option>
+                    <option value="book">Book</option>
+                    <option value="left">Book Left</option>
+                    <option value="right">Book Right</option>
+                </select>
             </div>
             <div class="table-responsive-scroll">
                 <table class="table table-definition align-center">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>中文</th>
                             <th>原形</th>
                             <th>過去式</th>
