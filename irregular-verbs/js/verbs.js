@@ -2648,8 +2648,12 @@ $(function() {
         $emptyTip.addClass('hide');;
     }
 
-    function makeRow(_data) {
-        $tbody.append('<tr />');
+    function makeRow(_data, isFirst) {
+        if (isFirst) {
+            $tbody.append('<tr class="active" />');
+        } else {
+            $tbody.append('<tr />');
+        }
 
         var $tr = $tbody.children('tr').last(),
             url = (_data.keyword) ? _data.keyword : _data.oneWord;
@@ -2674,7 +2678,8 @@ $(function() {
     }
 
     function _order(_data, filter) {
-        var no = 1;
+        var no = 1,
+            isFirst = false;
 
         if (_data.length) {
             filter = filter || false;
@@ -2682,7 +2687,8 @@ $(function() {
             nowData = _data;
 
             $.each(nowData, function(index, value) {
-                makeRow(value);
+                isFirst =  (0 === index) ? true : false;
+                makeRow(value, isFirst);
             });
 
             rowCounter(nowData.length);
@@ -2737,6 +2743,15 @@ $(function() {
         _order(tmpData);
     }
 
+    function setTrActive(wt) {
+        var $tr = $('.verbs').children('tr'),
+            getTrHeight = $tr.outerHeight(true),
+            headerHeight = 126,
+            which = parseInt((wt + headerHeight) / getTrHeight, 10);
+
+        $tr.removeClass('active').slice(0, which+1).addClass('active');
+    }
+
     init();
 
     $sortBtns.on('click', function(e) {
@@ -2751,15 +2766,9 @@ $(function() {
         switch (thatSort) {
             case 'order':
                 var thatFilterWord = $filter.val(),
-                    getFilterData = function() {
-                        if (thatFilterWord.length > 1) {
-                            return _filter('*', thatFilterWord);
-                        } else {
-                            return (thatFilterWord === '*') ? data : _filter(thatFilterWord);
-                        }
-                    };
+                    getFilterData = (thatFilterWord === '*') ? data : _filter(thatFilterWord);
 
-                _order(getFilterData());
+                _order(getFilterData);
                 break;
             case 'random':
                 _random();
@@ -2791,4 +2800,13 @@ $(function() {
         _order(nowData, thatFilterWord);
         window.history.pushState('', document.title, hash);
     });
+
+    if ($('html').data('device') === 'phone') {
+        $(window).on('scroll', function() {
+            var that = $(this),
+                thatTop = that.scrollTop();
+
+            setTrActive(thatTop);
+        });
+    }
 });

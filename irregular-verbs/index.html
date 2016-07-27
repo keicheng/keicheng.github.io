@@ -23,118 +23,69 @@
         <!--Javascript-->
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.160704/js/kule.urbrowser.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script type="text/javascript" src="js/verbs.min.js"></script>
-        <style>
-            .wrap {
-                padding: 20px 0;
-            }
-
-            .btn-grp {
-                margin-bottom: 20px;
-            }
-
-            .filter {
-                display: inline-block;
-                margin: 0 10px 10px;
-                vertical-align: top;
-            }
-
-            .verbs td {
-                white-space: nowrap;
-            }
-
-            .wrap th,
-            .verbs td:first-child {
-                color: #7f7f7f;
-            }
-
-            .verbs small {
-                color: grey;
-            }
-
-            .verbs small:before {
-                content: '';
-                display: block;
-                width: 0;
-            }
-
-            .verbs td a {
-                color: rgba(0,0,0,.87);
-                text-decoration: underline;
-            }
-
-            .footer {
-                padding: 20px;
-                text-align: center;
-                font-size: 14px;
-            }
-
-            .filter-select {
-                display: inline-block;
-                max-width: 200px;
-            }
-
-            .badge {
-                margin-top: 9px;
-            }
-        </style>
+        <script type="text/javascript" src="js/verbs.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/verbs.min.css">
     </head>
     <body>
         <div class="wrap align-center">
-            <h2>不規則動詞三態表</h2>
-            <div class="nav">
-                <div class="btn-grp">
-                    <a class="btn js-sort color-primary" data-sort="order">依字母排列</a>
-                    <a class="btn js-sort" data-sort="random">亂數排列</a>
+            <header class="header">
+                <h3>不規則動詞三態表</h3>
+                <div class="nav">
+                    <div class="btn-grp">
+                        <a class="btn js-sort color-primary" data-sort="order">字母</a>
+                        <a class="btn js-sort" data-sort="random">亂數</a>
+                    </div>
+                    <div class="filter">
+                        <select class="ctrl-input filter-select js-filter">
+                            <option value="*">所有</option>
+                            <option value="a">A 字首</option>
+                            <option value="b">B 字首</option>
+                            <option value="c">C 字首</option>
+                            <option value="d">D 字首</option>
+                            <option value="e">E 字首</option>
+                            <option value="f">F 字首</option>
+                            <option value="g">G 字首</option>
+                            <option value="h">H 字首</option>
+                            <option value="i">I 字首</option>
+                            <option value="j">J 字首</option>
+                            <option value="k">K 字首</option>
+                            <option value="l">L 字首</option>
+                            <option value="m">M 字首</option>
+                            <option value="o">O 字首</option>
+                            <option value="p">P 字首</option>
+                            <option value="q">Q 字首</option>
+                            <option value="r">R 字首</option>
+                            <option value="s">S 字首</option>
+                            <option value="t">T 字首</option>
+                            <option value="u">U 字首</option>
+                            <option value="w">W 字首</option>
+                            <option value="book">課本全部</option>
+                            <option value="left">課本左半部</option>
+                            <option value="right">課本右半部</option>
+                        </select>
+                    </div>
+                    <span class="badge"></span>
                 </div>
-                <div class="filter">
-                    <select class="ctrl-input filter-select js-filter">
-                        <option value="*">所有不規則動詞</option>
-                        <option value="a">A 字首動詞</option>
-                        <option value="b">B 字首動詞</option>
-                        <option value="c">C 字首動詞</option>
-                        <option value="d">D 字首動詞</option>
-                        <option value="e">E 字首動詞</option>
-                        <option value="f">F 字首動詞</option>
-                        <option value="g">G 字首動詞</option>
-                        <option value="h">H 字首動詞</option>
-                        <option value="i">I 字首動詞</option>
-                        <option value="j">J 字首動詞</option>
-                        <option value="k">K 字首動詞</option>
-                        <option value="l">L 字首動詞</option>
-                        <option value="m">M 字首動詞</option>
-                        <option value="o">O 字首動詞</option>
-                        <option value="p">P 字首動詞</option>
-                        <option value="q">Q 字首動詞</option>
-                        <option value="r">R 字首動詞</option>
-                        <option value="s">S 字首動詞</option>
-                        <option value="t">T 字首動詞</option>
-                        <option value="u">U 字首動詞</option>
-                        <option value="w">W 字首動詞</option>
-                        <option value="book">課本全部動詞</option>
-                        <option value="left">課本左半部</option>
-                        <option value="right">課本右半部</option>
-                    </select>
+            </header>
+            <main class="container">
+                <div class="table-responsive-scroll">
+                    <table class="table table-responsive table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th width="1%">中文</th>
+                                <th width="33%">原形</th>
+                                <th width="33%">過去式</th>
+                                <th width="33%">過去分詞</th>
+                            </tr>
+                        </thead>
+                        <tbody class="verbs"></tbody>
+                    </table>
                 </div>
-                <span class="badge"></span>
-            </div>
-            <div class="table-responsive-scroll">
-                <table class="table table-definition align-center">
-                    <thead>
-                        <tr>
-                            <th width="1%">中文</th>
-                            <th width="33%">原形</th>
-                            <th width="33%">過去式</th>
-                            <th width="33%">過去分詞</th>
-                        </tr>
-                    </thead>
-                    <tbody class="verbs"></tbody>
-                </table>
-            </div>
-            <div class="empty-tip hide"><p>沒有任何資料</p></div>
+                <div class="empty-tip hide"><p>沒有任何資料</p></div>
+            </main>
         </div>
-        <div class="footer">
+        <footer class="footer">
             Made by <a href="https://www.facebook.com/kule.tw" target="_blank">Kei™</a>
-        </div>
+        </footer>
     </body>
 </html>
