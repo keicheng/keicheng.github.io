@@ -2627,9 +2627,11 @@ var data = [{
 var nowData = data.slice(0);
 
 $(function() {
-    var $tbody = $('.verbs'),
+    var $verbs = $('.verbs'),
+        $tests = $('.tests'),
         $sortBtns = $('.js-sort'),
         $filter = $('.js-filter'),
+        $amount = $('.js-amount'),
         $tableWrap = $('.table-responsive-scroll'),
         $emptyTip = $('.empty-tip'),
         $badge = $('.badge');
@@ -2650,18 +2652,37 @@ $(function() {
 
     function makeRow(_data, isFirst) {
         if (isFirst) {
-            $tbody.append('<tr class="active" />');
+            $verbs.append('<tr class="active" />');
         } else {
-            $tbody.append('<tr />');
+            $verbs.append('<tr />');
         }
 
-        var $tr = $tbody.children('tr').last(),
-            url = (_data.keyword) ? _data.keyword : _data.oneWord;
+        var $tr = $verbs.children('tr').last(),
+            url = (_data.keyword) ? _data.keyword : _data.oneWord,
             htmlstr = (_data.zh) ? '<td data-label="中文翻譯">' + _data.zh + '</td>' : '<td />';
 
         htmlstr += '<td data-label="動詞原形"><a href="https://translate.google.com.tw/#en/zh-TW/' + url + '" target="_blank">' + _data.oneWord + '</a></td>';
         htmlstr += '<td data-label="過去式"><a href="https://translate.google.com.tw/#en/zh-TW/' + getOneWord(_data.past) + '" target="_blank">' + _data.past + '</a></td>';
         htmlstr += '<td data-label="過去分詞"><a href="https://translate.google.com.tw/#en/zh-TW/' + getOneWord(_data.part) + '" target="_blank">' + _data.part + '</a></td>';
+
+        getOneWord(_data.past);
+
+        $tr.append(htmlstr);
+    }
+
+    function makeTestRow(_data, isFirst) {
+        if (isFirst) {
+            $tests.append('<tr class="active" />');
+        } else {
+            $tests.append('<tr />');
+        }
+
+        var $tr = $tests.children('tr').last(),
+            htmlstr = (_data.zh) ? '<td data-label="中文翻譯">' + _data.zh + '</td>' : '<td />';
+
+        htmlstr += '<td data-label="動詞原形">' + _data.oneWord + '</td>';
+        htmlstr += '<td data-label="過去式"><input type="text" class="ctrl-input" /></td>';
+        htmlstr += '<td data-label="過去分詞"><input type="text" class="ctrl-input" /></td>';
 
         getOneWord(_data.past);
 
@@ -2677,18 +2698,24 @@ $(function() {
         return num;
     }
 
-    function _order(_data, filter) {
+    function _order(dom, _data, filter) {
         var no = 1,
-            isFirst = false;
+            isFirst = false,
+            domClassName = dom.get(0).className;
+
+        filter = filter || false;
 
         if (_data.length) {
-            filter = filter || false;
-
             nowData = _data;
 
             $.each(nowData, function(index, value) {
                 isFirst =  (0 === index) ? true : false;
-                makeRow(value, isFirst);
+
+                if (domClassName === 'verbs') {
+                    makeRow(value, isFirst);
+                } else {
+                    makeTestRow(value, isFirst);
+                }
             });
 
             rowCounter(nowData.length);
@@ -2705,7 +2732,7 @@ $(function() {
         var randomData = nowData.slice(0);
 
         randomData = randomData.sort(_shuffle);
-        _order(randomData);
+        _order($verbs, randomData);
     }
 
     function _filter(filter) {
@@ -2744,7 +2771,7 @@ $(function() {
             tmpData = data.slice(0);
         }
 
-        _order(tmpData);
+        _order($verbs, tmpData);
     }
 
     function setTrActive(wt) {
@@ -2756,15 +2783,31 @@ $(function() {
         $tr.removeClass('active').slice(0, which+1).addClass('active');
     }
 
-    init();
+    function getRandomItem(amount) {
+        var randomData = data.slice(0);
 
+        amount = +amount || parseInt($('.js-amount').val());
+        randomData = randomData.sort(_shuffle).slice(0, amount);
+        nowData = randomData;
+
+        return randomData;
+    }
+
+    function testInit() {
+        _order($tests, getRandomItem());
+    }
+
+    if ($verbs.length) init();
+    if ($tests.length) testInit();
+
+    //首頁排序選擇
     $sortBtns.on('click', function(e) {
         e.preventDefault();
 
         var that = $(this),
             thatSort = that.data('sort');
 
-        $tbody.children('tr').remove();
+        $verbs.children('tr').remove();
         $sortBtns.removeClass('color-primary');
 
         switch (thatSort) {
@@ -2772,20 +2815,21 @@ $(function() {
                 var thatFilterWord = $filter.val(),
                     getFilterData = (thatFilterWord === '*') ? data : _filter(thatFilterWord);
 
-                _order(getFilterData);
+                _order($verbs, getFilterData);
                 break;
             case 'random':
                 _random();
                 break;
             default:
-                _order(data);
+                _order($verbs, data);
         }
 
         that.addClass('color-primary');
     });
 
+    //首頁過濾選單
     $filter.on('change', function() {
-        $tbody.children('tr').remove();
+        $verbs.children('tr').remove();
 
         var that = $(this),
             thatFilterWord = that.val(),
@@ -2796,15 +2840,25 @@ $(function() {
                 } else {
                     return (thatFilterWord === '*') ? data : _filter(thatFilterWord);
                 }
-            };
+            },
+            $getDom = ($verbs.length) ? $verbs : $tests;
 
         nowData = getFilterData();
         hash = (thatFilterWord === '*') ? window.location.pathname : '#' + thatFilterWord;
 
-        _order(nowData, thatFilterWord);
+        _order($getDom, nowData, thatFilterWord);
         window.history.pushState('', document.title, hash);
     });
 
+    $amount.on('change', function() {
+        var that = $(this),
+            thatValue = that.val();
+
+        $tests.children('tr').remove();
+        _order($tests, getRandomItem(thatValue));
+    });
+
+    //處理 mobile 上的顯示方式
     if ($('html').data('device') === 'phone') {
         $(window).on('scroll', function() {
             var that = $(this),

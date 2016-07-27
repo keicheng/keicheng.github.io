@@ -11,7 +11,7 @@
 }
 
 .container {
-    padding: 126px 10px 10px;
+    padding: 126px 10px 203px;
 }
 
 .btn-grp {
@@ -24,7 +24,8 @@
     vertical-align: top;
 }
 
-.verbs {
+.verbs,
+.tests {
     td {
         white-space: nowrap;
 
@@ -50,14 +51,26 @@
 }
 
 .footer {
-    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #efefef;
     text-align: center;
     font-size: 14px;
+    background-color: #FFF;
 }
 
 .filter-select {
     display: inline-block;
     max-width: 136px;
+}
+
+.filter-amount {
+    display: inline-block;
+    width: auto;
 }
 
 .badge {
@@ -87,6 +100,10 @@
 }
 
 @media (min-width: 768px) {
+    .container {
+        padding-bottom: 10px;
+    }
+
     .verbs {
         small {
             display: block;
