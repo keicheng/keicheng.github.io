@@ -2140,7 +2140,7 @@ var data = [{
     'oneWord': 'strike',
     'ori': 'strike',
     'past': 'struck',
-    'part': 'stricken',
+    'part': 'struck \/ stricken',
     'book': true
 }, {
     'zh': '縛；紮；穿',
