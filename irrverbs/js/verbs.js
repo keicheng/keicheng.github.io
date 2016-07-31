@@ -2656,7 +2656,7 @@ $(function() {
         }
 
         var $tr = $tbody.children('tr').last(),
-            url = (_data.keyword) ? _data.keyword : _data.oneWord;
+            url = (_data.keyword) ? _data.keyword : _data.oneWord,
             htmlstr = (_data.zh) ? '<td data-label="中文翻譯">' + _data.zh + '</td>' : '<td />';
 
         htmlstr += '<td data-label="動詞原形"><a href="https://translate.google.com.tw/#en/zh-TW/' + url + '" target="_blank">' + _data.oneWord + '</a></td>';
