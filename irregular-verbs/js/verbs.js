@@ -2624,7 +2624,8 @@ var data = [{
     'book': true
 }];
 
-var nowData = data.slice(0);
+var nowData = data.slice(0),
+    testData = data.slice(0);
 
 $(function() {
     var $verbs = $('.verbs'),
@@ -2784,7 +2785,7 @@ $(function() {
     }
 
     function getRandomItem(amount) {
-        var randomData = data.slice(0);
+        var randomData = testData.slice(0);
 
         amount = +amount || parseInt($('.js-amount').val());
         randomData = randomData.sort(_shuffle).slice(0, amount);
@@ -2794,6 +2795,21 @@ $(function() {
     }
 
     function testInit() {
+        var tmpData = [],
+            hash = window.location.hash;
+
+        if (hash.length) {
+            hash = hash.split('#')[1];
+
+            if (hash != '*') tmpData = _filter(hash);
+
+            $filter.children('option[value="' + hash + '"]').prop('selected', true);
+
+        } else {
+            tmpData = data.slice(0);
+        }
+
+        testData = tmpData;
         _order($tests, getRandomItem());
     }
 
