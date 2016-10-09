@@ -1,0 +1,41 @@
+body, html {
+    height: auto;
+}
+
+body {
+    line-height: 1.35;
+    margin: 20px;
+}
+
+.table small {
+    font-size: 85%;
+    color: grey;
+}
+
+thead th {
+    cursor: pointer;
+}
+
+th.sorting {
+    color: grey;
+}
+
+#myTable .mom-im-here td {
+    color: #FFF;
+    background: #353535 !important;
+}
+
+td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
+
+.table tbody tr:hover td {color: #FFF; background-color: #666;}
+.table tbody tr:hover small {color: rgba(255,255,255, .8);}
+
+.sorting_bad tbody tr:hover td {background-color: #82ba29;}
+.sorting_bad tbody tr:nth-child(-n+3):hover td {background-color: #55b3e9;}
+.sorting_bad tbody tr.mom-im-here ~ tr:hover td {background-color: #f38b2e;}
+.sorting_bad tbody tr:nth-last-child(4) ~ tr:hover td {background-color: #d63a2b;}
+
+.sorting_good tbody tr:hover td { color: #FFF; background-color: #f38b2e;}
+.sorting_good tbody tr:nth-child(-n+3):hover td {background-color: #d63a2b;}
+.sorting_good tbody tr.mom-im-here ~ tr:hover td {background-color: #82ba29;}
+.sorting_good tbody tr:nth-last-child(4) ~ tr:hover td {background-color: #55b3e9;}

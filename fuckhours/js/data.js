@@ -1,0 +1,313 @@
+var data = [{
+    country: '墨西哥',
+    hours: 2246,
+    gni: 9710,
+    year: 2015,
+    pvd: 5,
+    pph: 7,
+    eng: 'Mexico'
+}, {
+    country: '哥斯大黎加',
+    hours: 2230,
+    gni: 10210,
+    year: 2015,
+    pvd: 10,
+    pph: 9,
+    eng: 'Costa Rica'
+}, {
+    country: '韓國',
+    hours: 2113,
+    gni: 27440,
+    year: 2015,
+    pvd: 15,
+    pph: 12,
+    eng: 'Korea'
+}, {
+    country: '台灣',
+    hours: 2104,
+    gni: 23390,
+    year: 2015,
+    pvd: 7,
+    pph: 12,
+    eng: 'Taiwan'
+}, {
+    country: '希臘',
+    hours: 2026,
+    gni: 22090,
+    year: 2014,
+    pvd: 20,
+    pph: 4,
+    eng: 'Greece'
+}, {
+    country: '智利',
+    hours: 1988,
+    gni: 14760,
+    year: 2015,
+    pvd: 15,
+    pph: 15,
+    eng: 'Chile'
+}, {
+    country: '俄羅斯',
+    hours: 1978,
+    gni: 11400,
+    year: 2015,
+    pvd: 20,
+    pph: 12,
+    eng: 'Russia'
+}, {
+    country: '波蘭',
+    hours: 1963,
+    gni: 13370,
+    year: 2015,
+    pvd: 20,
+    pph: 13,
+    eng: 'Pland'
+}, {
+    country: '拉脫維亞',
+    hours: 1903,
+    gni: 14900,
+    year: 2015,
+    pvd: 20,
+    pph: 11,
+    eng: 'Latvia'
+}, {
+    country: '冰島',
+    hours: 1880,
+    gni: 49730,
+    year: 2015,
+    pvd: 24,
+    pph: 12,
+    eng: 'Iceland'
+}, {
+    country: '葡萄牙',
+    hours: 1868,
+    gni: 20530,
+    year: 2015,
+    pvd: 22,
+    pph: 13,
+    eng: 'Portugal'
+}, {
+    country: '立陶宛',
+    hours: 1860,
+    gni: 15000,
+    year: 2015,
+    pvd: 20,
+    pph: 14,
+    eng: 'Lithuania'
+}, {
+    country: '以色列',
+    hours: 1858,
+    gni: 34440,
+    year: 2015,
+    pvd: 11,
+    pph: 9,
+    eng: 'Israel'
+}, {
+    country: '愛沙尼亞',
+    hours: 1852,
+    gni: 18480,
+    year: 2015,
+    pvd: 20,
+    pph: 11,
+    eng: 'Estonia'
+}, {
+    country: '土耳其',
+    hours: 1832,
+    gni: 10850,
+    year: 2014,
+    pvd: 12,
+    pph: 14.5,
+    eng: 'Turkey'
+}, {
+    country: '愛爾蘭',
+    hours: 1820,
+    gni: 44680,
+    year: 2015,
+    pvd: 20,
+    pph: 9,
+    eng: 'Ireland'
+}, {
+    country: '美國',
+    hours: 1790,
+    gni: 54960,
+    year: 2015,
+    pvd: 10,
+    pph: 10,
+    eng: 'United States'
+}, {
+    country: '捷克',
+    hours: 1779,
+    gni: 18050,
+    year: 2015,
+    pvd: 20,
+    pph: 13,
+    eng: 'Czech RePublic'
+}, {
+    country: '紐西蘭',
+    hours: 1757,
+    gni: 40080,
+    year: 2015,
+    pvd: 20,
+    pph: 11,
+    eng: 'New Zealand'
+}, {
+    country: '斯洛伐克',
+    hours: 1754,
+    gni: 17310,
+    year: 2015,
+    pvd: 20,
+    pph: 15,
+    eng: 'Slovakia'
+}, {
+    country: '匈牙利',
+    hours: 1749,
+    gni: 12990,
+    year: 2015,
+    pvd: 20,
+    pph: 13,
+    eng: 'Hungary'
+}, {
+    country: '義大利',
+    hours: 1725,
+    gni: 34790,
+    year: 2015,
+    pvd: 20,
+    pph: 12,
+    eng: 'Italy'
+}, {
+    country: '日本',
+    hours: 1719,
+    gni: 36680,
+    year: 2015,
+    pvd: 10,
+    pph: 11,
+    eng: 'Japan'
+}, {
+    country: '加拿大',
+    hours: 1706,
+    gni: 47500,
+    year: 2015,
+    pvd: 10,
+    pph: 6,
+    eng: 'Canada'
+}, {
+    country: '西班牙',
+    hours: 1691,
+    gni: 28520,
+    year: 2015,
+    pvd: 22,
+    pph: 14,
+    eng: 'Spain'
+}, {
+    country: '斯洛維尼亞',
+    hours: 1676,
+    gni: 22610,
+    year: 2015,
+    pvd: 20,
+    pph: 12,
+    eng: 'Slovenia'
+}, {
+    country: '英國',
+    hours: 1674,
+    gni: 43340,
+    year: 2015,
+    pvd: 28,
+    pph: 6,
+    eng: 'United Kingdom'
+}, {
+    country: '澳洲',
+    hours: 1665,
+    gni: 60070,
+    year: 2015,
+    pvd: 20,
+    pph: 10,
+    eng: 'Australia'
+}, {
+    country: '芬蘭',
+    hours: 1646,
+    gni: 46360,
+    year: 2015,
+    pvd: 25,
+    pph: 11,
+    eng: 'Finland'
+}, {
+    country: '奧地利',
+    hours: 1625,
+    gni: 47120,
+    year: 2015,
+    pvd: 25,
+    pph: 13,
+    eng: 'Austria'
+}, {
+    country: '瑞典',
+    hours: 1612,
+    gni: 57810,
+    year: 2015,
+    pvd: 25,
+    pph: 9,
+    eng: 'Sweden'
+}, {
+    country: '瑞士',
+    hours: 1590,
+    gni: 84180,
+    year: 2015,
+    pvd: 20,
+    pph: 7,
+    eng: 'Switzerland'
+}, {
+    country: '比利時',
+    hours: 1541,
+    gni: 44360,
+    year: 2015,
+    pvd: 20,
+    pph: 10,
+    eng: 'Belgium'
+}, {
+    country: '盧森堡',
+    hours: 1507,
+    gni: 77000,
+    year: 2015,
+    pvd: 25,
+    pph: 10,
+    eng: 'Luxembourg'
+}, {
+    country: '法國',
+    hours: 1482,
+    gni: 40580,
+    year: 2015,
+    pvd: 25,
+    pph: 11,
+    eng: 'France'
+}, {
+    country: '丹麥',
+    hours: 1457,
+    gni: 58590,
+    year: 2015,
+    pvd: 25,
+    pph: 10,
+    eng: 'Denmark'
+}, {
+    country: '挪威',
+    hours: 1424,
+    gni: 93820,
+    year: 2015,
+    pvd: 25,
+    pph: 2,
+    eng: 'Norway'
+}, {
+    country: '荷蘭',
+    hours: 1419,
+    gni: 48940,
+    year: 2015,
+    pvd: 20,
+    pph: 7,
+    eng: 'Netherlands'
+}, {
+    country: '德國',
+    hours: 1371,
+    gni: 45790,
+    year: 2015,
+    pvd: 20,
+    pph: 9,
+    eng: 'Germany'
+}];
