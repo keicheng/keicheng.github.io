@@ -20,6 +20,10 @@ th.sorting {
     color: grey;
 }
 
+#myTable {
+    min-width: 1024px;
+}
+
 #myTable .mom-im-here td {
     color: #FFF;
     background: #353535 !important;

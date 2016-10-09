@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" charset="utf-8" >
         <meta http-equiv="Content-Language" content="zh-TW" >
         <meta name="robots" content="all" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="author" content="Kei™/kei.tw" >
         <meta name="distribution" content="Taiwan">
         <meta name="description" content="台灣工時基本上都在前五名。工時跟收入並不一定成正比，也不會跟競爭力成正比，更不會因為工時低企業就會貧窮。如果工時高就一定會有競爭力的話，以後都不要放假全都去上班拼競爭力啊 XD。" >
@@ -31,23 +32,25 @@
 	<body>
         <h2 class="align-center text-primary">Dochi? <small>來看看自己的工時與薪資符合哪國人？ </small></h2>
         <p class="align-center text-note">僅哭笑不得、參考看看就好</p>
-        <table id="myTable" class="table table-striped table-outline align-center">
-            <thead>
-                <tr class="thr">
-                    <th width="1%">#</th>
-                    <th width="1%">國家</th>
-                    <th>工時<br/><small>資料年份</small></th>
-                    <th>工時<br/><small>(工時排名)</small></th>
-                    <th>單日<br /><small>平均工時</small></th>
-                    <th>人均收入<br/><small class="text-note">(NTD)</small></th>
-                    <th>時薪<br/><small class="text-note">(NTD)</small></th>
-                    <th>年假</th>
-                    <th>國定<br/>假日</th>
-                    <th>假日總數</th>
-                </tr>
-            </thead>
-            <tbody class="cells"></tbody>
-        </table>
+        <div class="table-responsive-scroll">
+            <table id="myTable" class="table table-striped table-outline align-center">
+                <thead>
+                    <tr class="thr">
+                        <th width="1%">#</th>
+                        <th width="1%">國家</th>
+                        <th>工時<br/><small>資料年份</small></th>
+                        <th>工時<br/><small>(工時排名)</small></th>
+                        <th>單日<br /><small>平均工時</small></th>
+                        <th>人均收入<br/><small class="text-note">(NTD)</small></th>
+                        <th>時薪<br/><small class="text-note">(NTD)</small></th>
+                        <th>年假</th>
+                        <th>國定<br/>假日</th>
+                        <th>假日總數</th>
+                    </tr>
+                </thead>
+                <tbody class="cells"></tbody>
+            </table>
+        </div>
         <br />
         <h6>參考資料：</h6>
         <ul class="kui-list">
@@ -62,5 +65,23 @@
             <li>美金匯率：31.4</li>
             <li>假日總數計算方式為：預設週休二日、一年52週共有 104 天，以國定假日不重疊的情況下(反正在台灣大多也會補假)，年假 + 國定假日 + 104天</li>
         </ul>
+        <hr />
+        <div class="social clearfix">
+            <div class="fb-like" data-href="http://keicheng.github.io/fuckhours/index.html" data-width="320" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+            <br>
+            <div class="fb-send inline align-top" data-href="http://keicheng.github.io/fuckhours/index.html"></div>
+            <div class="fb-save inline align-top" data-uri="http://keicheng.github.io/fuckhours/index.html" data-size="small"></div>
+
+        </div>
+        <hr />
+        <div class="fb-comments" data-href="http://keicheng.github.io/fuckhours/index.html" data-width="100%" data-numposts="10"></div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=176827449338698";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 	</body>
 </html>
