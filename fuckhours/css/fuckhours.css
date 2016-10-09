@@ -43,3 +43,8 @@ td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
 .sorting_good tbody tr:nth-child(-n+3):hover td {background-color: #d63a2b;}
 .sorting_good tbody tr.mom-im-here ~ tr:hover td {background-color: #82ba29;}
 .sorting_good tbody tr:nth-last-child(4) ~ tr:hover td {background-color: #55b3e9;}
+
+.social {
+    position: relative;
+    z-index: 2;
+}
