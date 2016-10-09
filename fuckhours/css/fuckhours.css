@@ -21,7 +21,8 @@ th.sorting {
 }
 
 #myTable {
-    min-width: 1024px;
+    width: 100%;
+    min-width: 984px;
 }
 
 #myTable .mom-im-here td {
