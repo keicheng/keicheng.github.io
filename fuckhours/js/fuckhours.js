@@ -21,7 +21,7 @@ $(function() {
         var workday = 365 - (value.pvd + value.pph + 104),
             h_d = value.hours / workday;
 
-        $cells.append('<tr '+ tw +'>'
+        $cells.append('<tr id="fh_' + index + '" '+ tw +'>'
             + '<td></td>'
             + '<td>' + value.eng + '<br /><small>' + value.country + '</small></td>'
             + '<td>' + value.year + '</td>'
