@@ -1,4 +1,20 @@
 var data = [{
+    country: '新加坡',
+    hours: 2371,
+    gni: 52090,
+    year: 2015,
+    pvd: 7,
+    pph: 11,
+    eng: 'Singapore'
+}, {
+    country: '印度',
+    hours: 2365,
+    gni: 1610,
+    year: 2014,
+    pvd: 12,
+    pph: 15,
+    eng: 'India'
+}, {
     country: '墨西哥',
     hours: 2246,
     gni: 9710,
