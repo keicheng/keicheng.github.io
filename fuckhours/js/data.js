@@ -25,7 +25,7 @@ var data = [{
 }, {
     country: '台灣',
     hours: 2104,
-    gni: 23390,
+    gni: 20925,
     year: 2015,
     pvd: 7,
     pph: 12,
@@ -97,7 +97,7 @@ var data = [{
 }, {
     country: '以色列',
     hours: 1858,
-    gni: 34440,
+    gni: 35440,
     year: 2015,
     pvd: 11,
     pph: 9,
@@ -121,7 +121,7 @@ var data = [{
 }, {
     country: '愛爾蘭',
     hours: 1820,
-    gni: 44680,
+    gni: 46680,
     year: 2015,
     pvd: 20,
     pph: 9,
