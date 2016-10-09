@@ -40,8 +40,6 @@ th.sorting {
     display: block;
 }
 
-td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
-
 .social {
     position: relative;
     z-index: 2;
@@ -111,6 +109,8 @@ td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
         background: #353535 !important;
         white-space: nowrap;
     }
+
+    td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
 }
 
 @media (min-width: 992px) {
