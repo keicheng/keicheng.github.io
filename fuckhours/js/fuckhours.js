@@ -58,11 +58,11 @@ $(function() {
             $newTr.append('<td class="' + ((tw.pvd >= value.pvd) ? ((tw.pvd > value.pvd) ? 'error' : 'warning') : 'success') + '" data-label="年假天數">' + value.pvd + '</td>');
             $newTr.append('<td class="' + ((tw.pph >= value.pph) ? ((tw.pph > value.pph) ? 'error' : 'warning') : 'success') + '" data-label="國定假日">' + value.pph + '</td>');
             $newTr.append('<td class="' + ((tt >= vt) ? ((tt > vt) ? 'error' : 'warning') : 'success') + '" data-label="假日總數">' + (vt + 104) + '</td>');
-            $newTr.append('<td data-label="最低稅率">' + value.taxMin + '%</td>');
-            $newTr.append('<td data-label="最高稅率">' + value.taxMax + '%</td>');
-            $newTr.append('<td data-label="生活成本指數">' + value.col + '</td>');
-            $newTr.append('<td data-label="租金指數">' + value.rent + '</td>');
-            $newTr.append('<td data-label="消費力指數">' + value.lppi + '</td>');
+            $newTr.append('<td class="' + ((tw.taxMin >= value.taxMin) ? ((tw.taxMin > value.taxMin) ? 'success' : 'warning') : 'error') + '" data-label="最低稅率">' + value.taxMin + '%</td>');
+            $newTr.append('<td class="' + ((tw.taxMax >= value.taxMax) ? ((tw.taxMax > value.taxMax) ? 'success' : 'warning') : 'error') + '"  data-label="最高稅率">' + value.taxMax + '%</td>');
+            $newTr.append('<td class="' + ((tw.col >= value.col) ? ((tw.col > value.col) ? 'success' : 'warning') : 'error') + '" data-label="生活成本指數">' + value.col + '</td>');
+            $newTr.append('<td class="' + ((tw.rent >= value.rent) ? ((tw.rent > value.rent) ? 'success' : 'warning') : 'error') + '" data-label="租金指數">' + value.rent + '</td>');
+            $newTr.append('<td class="' + ((tw.lppi >= value.lppi) ? ((tw.lppi > value.lppi) ? 'error' : 'warning') : 'success') + '" data-label="消費力指數">' + value.lppi + '</td>');
 
         } else {
             $cells.append('<tr id="fh_' + index + '" '+ isTW +'>'
