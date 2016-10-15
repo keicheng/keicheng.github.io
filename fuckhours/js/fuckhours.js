@@ -51,7 +51,7 @@ $(function() {
             $newTr.append('<td class="hide-xs" />');
             $newTr.append('<td data-label="國家">' + value.eng + ' <br class="hide-xs" /><small>' + value.country + '</small></td>');
             $newTr.append('<td data-label="工時資料年份">' + value.year + '</td>');
-            $newTr.append('<td class="' + ((tw.hours >= value.hours) ? ((tw.hours > value.hours) ? 'success' : 'warning') : 'error') + '" data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <br/><small>(' + (index+1) + ')</small>' + '</td>');
+            $newTr.append('<td class="' + ((tw.hours >= value.hours) ? ((tw.hours > value.hours) ? 'success' : 'warning') : 'error') + '" data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <small>(' + (index+1) + ')</small>' + '</td>');
             $newTr.append('<td class="' + ((t_hd >= v_hd) ? ((t_hd > v_hd) ? 'success' : 'warning') : 'error') + '" data-label="單日平均工時">' + (Math.round(v_hd * 10) / 10) + '</td>');
             $newTr.append('<td class="' + ((tw.gni >= value.gni) ? ((tw.gni > value.gni) ? 'error' : 'warning') : 'success') + '" data-label="人均收入(NTD)">' + $.moneyFormat(value.gni * exchangeRate) + '</td>');
             $newTr.append('<td class="' + ((tw.gni >= value.gni) ? ((tw.gni > value.gni) ? 'error' : 'warning') : 'success') + '" data-label="時薪(NTD)">' + $.moneyFormat(Math.round(value.gni / value.hours * exchangeRate )) + '</td>');
@@ -69,7 +69,7 @@ $(function() {
                 + '<td class="hide-xs"></td>'
                 + '<td data-label="國家">' + value.eng + ' <br class="hide-xs" /><small>' + value.country + '</small></td>'
                 + '<td data-label="工時資料年份">' + value.year + '</td>'
-                + '<td data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <br/><small>(' + (index+1) + ')</small>' + '</td>'
+                + '<td data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <small>(' + (index+1) + ')</small>' + '</td>'
                 + '<td data-label="單日平均工時">' + (Math.round(v_hd * 10) / 10) + '</td>'
                 + '<td data-label="人均收入(NTD)">' + $.moneyFormat(value.gni * exchangeRate) + '</td>'
                 + '<td data-label="時薪(NTD)">' + $.moneyFormat(Math.round(value.gni / value.hours * exchangeRate )) + '</td>'
@@ -90,7 +90,7 @@ $(function() {
     $twCell.append('<tr>'
         + '<td data-label="國家">' + tw.eng + ' <br class="hide-xs" /><small>' + tw.country + '</small></td>'
         + '<td data-label="工時資料年份">' + tw.year + '</td>'
-        + '<td data-label="工時(工時排名)">' + $.moneyFormat(tw.hours) + ' <br/><small>(6)</small>' + '</td>'
+        + '<td data-label="工時(工時排名)">' + $.moneyFormat(tw.hours) + ' <small>(6)</small>' + '</td>'
         + '<td data-label="單日平均工時">' + (Math.round(t_hd * 10) / 10) + '</td>'
         + '<td data-label="人均收入(NTD)">' + $.moneyFormat(tw.gni * exchangeRate) + '</td>'
         + '<td data-label="時薪(NTD)">' + $.moneyFormat(Math.round(tw.gni / tw.hours * exchangeRate )) + '</td>'
