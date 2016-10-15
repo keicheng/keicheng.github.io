@@ -12,6 +12,11 @@ $(function() {
             year: 2015,
             pvd: 7,
             pph: 12,
+            taxMin: 5,
+            taxMax: 45,
+            col: 57.36,
+            rent: 16.10,
+            lppi: 113.24,
             eng: 'Taiwan'
         };
 
@@ -46,26 +51,36 @@ $(function() {
             $newTr.append('<td class="hide-xs" />');
             $newTr.append('<td data-label="國家">' + value.eng + ' <br class="hide-xs" /><small>' + value.country + '</small></td>');
             $newTr.append('<td data-label="工時資料年份">' + value.year + '</td>');
-            $newTr.append('<td class="' + ((tw.hours >= value.hours) ? ((tw.hours > value.hours) ? 'success' : 'warning') : 'error') + '" data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <small>(' + (index+1) + ')</small>' + '</td>');
+            $newTr.append('<td class="' + ((tw.hours >= value.hours) ? ((tw.hours > value.hours) ? 'success' : 'warning') : 'error') + '" data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <br/><small>(' + (index+1) + ')</small>' + '</td>');
             $newTr.append('<td class="' + ((t_hd >= v_hd) ? ((t_hd > v_hd) ? 'success' : 'warning') : 'error') + '" data-label="單日平均工時">' + (Math.round(v_hd * 10) / 10) + '</td>');
             $newTr.append('<td class="' + ((tw.gni >= value.gni) ? ((tw.gni > value.gni) ? 'error' : 'warning') : 'success') + '" data-label="人均收入(NTD)">' + $.moneyFormat(value.gni * exchangeRate) + '</td>');
             $newTr.append('<td class="' + ((tw.gni >= value.gni) ? ((tw.gni > value.gni) ? 'error' : 'warning') : 'success') + '" data-label="時薪(NTD)">' + $.moneyFormat(Math.round(value.gni / value.hours * exchangeRate )) + '</td>');
             $newTr.append('<td class="' + ((tw.pvd >= value.pvd) ? ((tw.pvd > value.pvd) ? 'error' : 'warning') : 'success') + '" data-label="年假天數">' + value.pvd + '</td>');
             $newTr.append('<td class="' + ((tw.pph >= value.pph) ? ((tw.pph > value.pph) ? 'error' : 'warning') : 'success') + '" data-label="國定假日">' + value.pph + '</td>');
             $newTr.append('<td class="' + ((tt >= vt) ? ((tt > vt) ? 'error' : 'warning') : 'success') + '" data-label="假日總數">' + (vt + 104) + '</td>');
+            $newTr.append('<td data-label="最低稅率">' + value.taxMin + '%</td>');
+            $newTr.append('<td data-label="最高稅率">' + value.taxMax + '%</td>');
+            $newTr.append('<td data-label="生活成本指數">' + value.col + '</td>');
+            $newTr.append('<td data-label="租金指數">' + value.rent + '</td>');
+            $newTr.append('<td data-label="消費力指數">' + value.lppi + '</td>');
 
         } else {
             $cells.append('<tr id="fh_' + index + '" '+ isTW +'>'
                 + '<td class="hide-xs"></td>'
                 + '<td data-label="國家">' + value.eng + ' <br class="hide-xs" /><small>' + value.country + '</small></td>'
                 + '<td data-label="工時資料年份">' + value.year + '</td>'
-                + '<td data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <small>(' + (index+1) + ')</small>' + '</td>'
+                + '<td data-label="工時(工時排名)">' + $.moneyFormat(value.hours) + ' <br/><small>(' + (index+1) + ')</small>' + '</td>'
                 + '<td data-label="單日平均工時">' + (Math.round(v_hd * 10) / 10) + '</td>'
                 + '<td data-label="人均收入(NTD)">' + $.moneyFormat(value.gni * exchangeRate) + '</td>'
                 + '<td data-label="時薪(NTD)">' + $.moneyFormat(Math.round(value.gni / value.hours * exchangeRate )) + '</td>'
                 + '<td data-label="年假天數">' + value.pvd + '</td>'
                 + '<td data-label="國定假日">' + value.pph + '</td>'
                 + '<td data-label="假日總數">' + (vt + 104) + '</td>'
+                + '<td data-label="最低稅率">' + value.taxMin + '%</td>'
+                + '<td data-label="最高稅率">' + value.taxMax + '%</td>'
+                + '<td data-label="生活成本指數">' + value.col + '</td>'
+                + '<td data-label="租金指數">' + value.rent + '</td>'
+                + '<td data-label="消費力指數">' + value.lppi + '</td>'
                 + '</tr>');
         }
 
@@ -75,13 +90,18 @@ $(function() {
     $twCell.append('<tr>'
         + '<td data-label="國家">' + tw.eng + ' <br class="hide-xs" /><small>' + tw.country + '</small></td>'
         + '<td data-label="工時資料年份">' + tw.year + '</td>'
-        + '<td data-label="工時(工時排名)">' + $.moneyFormat(tw.hours) + ' <small>(6)</small>' + '</td>'
+        + '<td data-label="工時(工時排名)">' + $.moneyFormat(tw.hours) + ' <br/><small>(6)</small>' + '</td>'
         + '<td data-label="單日平均工時">' + (Math.round(t_hd * 10) / 10) + '</td>'
         + '<td data-label="人均收入(NTD)">' + $.moneyFormat(tw.gni * exchangeRate) + '</td>'
         + '<td data-label="時薪(NTD)">' + $.moneyFormat(Math.round(tw.gni / tw.hours * exchangeRate )) + '</td>'
         + '<td data-label="年假天數">' + tw.pvd + '</td>'
         + '<td data-label="國定假日">' + tw.pph + '</td>'
         + '<td data-label="假日總數">' + (tt + 104) + '</td>'
+        + '<td data-label="最低稅率">' + tw.taxMin + '%</td>'
+        + '<td data-label="最高稅率">' + tw.taxMax + '%</td>'
+        + '<td data-label="生活成本指數">' + tw.col + '</td>'
+        + '<td data-label="租金指數">' + tw.rent + '</td>'
+        + '<td data-label="消費力指數">' + tw.lppi + '</td>'
         + '</tr>');
 
     var $table = $('#myTable'),
