@@ -1,4 +1,4 @@
-var data = [{
+var datas = [{
     country: '新加坡',
     hours: 2371,
     gni: 52090,

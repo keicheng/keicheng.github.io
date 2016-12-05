@@ -36,7 +36,7 @@ $(function() {
         t_hd = tw.hours / t_workday,
         tt = tw.pvd + tw.pph;
 
-    $.each(data, function(index, value) {
+    $.each(datas, function(index, value) {
         isTW = (value.eng == 'Taiwan') ? 'class="mom-im-here"' : '';
 
         var v_workday = 365 - (value.pvd + value.pph + 104),

@@ -10,12 +10,12 @@ body {
 
 .table small {
     font-size: 85%;
-    color: grey;
+    color: rgba(0,0,0,.25);
 }
 
 .table th,
 .table td {
-    padding: 15px 8px;
+    padding: 20px 5px;
 }
 
 thead th {
@@ -39,12 +39,8 @@ th.sorting {
     text-align: right;
 }
 
-#myTable tbody tr {
+#twTable {
     display: none;
-}
-
-#myTable tbody tr.active {
-    display: block;
 }
 
 .social {
@@ -80,18 +76,18 @@ th.sorting {
 .note-success:before {background-color: #82ba29;}
 .note-warning:before {background-color: #f38b2e;}
 
-#twTable {display: none;}
+td.error {color: #d63a2b;}
+td.success {color: #82ba29;}
+td.warning {color: #f38b2e;}
 
 @media (max-width: 767px) {
-    #myTable td.error {color: #d63a2b;}
-    #myTable td.success {color: #82ba29;}
-    #myTable td.warning {color: #f38b2e;}
-
     .color-note {
         display: block;
     }
 
-    #twTable {display: table;}
+    #twTable {
+        display: table;
+    }
 }
 
 @media (min-width: 768px) {
@@ -116,6 +112,8 @@ th.sorting {
         background: #353535 !important;
         white-space: nowrap;
     }
+
+    #myTable .mom-im-here small {color: rgba(255,255,255, .6);}
 
     td:nth-child(1), td:nth-child(2), td:nth-child(3) {font-size: 90%;}
 }
