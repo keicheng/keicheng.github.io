@@ -21,13 +21,13 @@
 		"oAP": "\/config.rb",
 		"oF": 0
 		},
-	"\/css\/protfolio.css": {
+	"\/css\/portfolio.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/protfolio.min.css",
+		"oAP": "\/css\/portfolio.min.css",
 		"oF": 0,
 		"oS": 0
 		},
@@ -256,7 +256,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/protfolio.scss": {
+	"\/sass\/portfolio.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -264,7 +264,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/protfolio.css",
+		"oAP": "\/css\/portfolio.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
