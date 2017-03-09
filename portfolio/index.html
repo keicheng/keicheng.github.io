@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta http-equiv="Content-Type" charset="utf-8" />
+        <meta http-equiv="Content-Language" content="zh-TW" />
+        <meta name="robots" content="none" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="Author" content="Kei™" />
+        <title>Kei Cheng - Portfolio</title>
+        <link rev="made" title="Author Mail" href="mailto:info@kei.tw" />
+        <link rev="made" title="Author Web" href="http://www.kei.tw/" />
+        <link rel="Shortcut icon" href="http://www.kei.tw/img/favicon.ico" />
+        <link rel="Bookmark" href="http://www.kei.tw/img/favicon.ico" />
+        <link rel="stylesheet" href="css/portfolio.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div class="section namecard">
+                <div class="wrap">
+                    <div class="photo">
+                        <img src="img/photo.jpg" class="avatar">
+                    </div>
+                    <div class="intro">
+                        <h2>嗨！我是 Kei</h2>
+                        <p>來自台北，曾就讀松山商職廣告設計科與台灣科技大學工商業設計系。早期從事網頁設計相關工作，近年皆以網頁前端為主。<br />曾經開發過 CSS Framework。</p>
+                        <dl>
+                            <dt>使用的技能</dt>
+                            <dd>HTML, CSS, Javascript, jQuery, Ajax, JSON, Vue.js</dd>
+                            <dt>使用的系統</dt>
+                            <dd>macOS, Windows</dd>
+                            <dt>使用的軟體與工具</dt>
+                            <dd>Sketch, Sublime, Codekit, Photoshop, Illusrator, XMind, iTerm2, git</dd>
+                        </dl>
+                        <h4>與我聯繫</h4>
+                        <p>如有任何工作上的合作需求或是聊聊簡單打個招呼，您可透過以下方式與我聯繫：</p>
+                        <ul>
+                            <li>info@kei.tw</li>
+                            <li><a href="https://github.com/keicheng" target="_blank">https://github.com/keicheng</a></li>
+                            <li><a href="https://www.facebook.com/kule.tw" target="_blank">https://www.facebook.com/kule.tw</a></li>
+                        </ul>
+                        <hr />
+                        <div class="works">
+                            <div class="work-list">
+                                <div class="item" v-for="(v, key) in shows">
+                                    <a class="item-content"
+                                        v-bind:style="{
+                                            backgroundImage: v.thumbnail,
+                                            backgroundColor: v.bgColor,
+                                            backgroundSize: v.bgSize
+                                        }"
+                                        v-bind:href="v.url"
+                                        target="_blank">
+                                    </a>
+                                </div>
+                            </div>
+                            <hr />
+                            <div class="wrap">
+                                <h4>專案與經歷</h4>
+                                <ol>
+                                    <li v-for="(v, key) in works" v-html="renderItem(v)"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/data.min.js"></script>
+        <script src="js/vue.min.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
