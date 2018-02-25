@@ -4,8 +4,18 @@ var data = [{
     show: true,
     thumbnail: 'url(img/kule.png)'
 }, {
-    name: '美國關島政府觀光網站 (執行中)',
-    url: 'http://demo.kei.tw/guam/',
+    name: 'DOTCH!',
+    url: 'https://dotch.today',
+    show: true,
+    thumbnail: 'url(img/dotch.jpg)'
+}, {
+    name: '單字卡',
+    url: 'https://eng.kei.tw',
+    show: true,
+    thumbnail: 'url(img/words.jpg)'
+}, {
+    name: '美國關島政府觀光網站',
+    url: 'http://47.88.171.175/guam2017',
     show: true,
     thumbnail: 'url(img/guam.png)'
 }, {
@@ -98,7 +108,7 @@ var data = [{
     url: 'http://demo.kei.tw/Buyble/',
     show: false
 }, {
-    name: '逗點設計官方網站',
+    name: '逗點設計官方網站 (含後台)',
     url: 'http://www.dotted.com.tw/',
     show: false
 }, {
@@ -119,7 +129,6 @@ var data = [{
     show: false
 }, {
     name: 'GUDY 網路花店官方網站',
-    url: 'http://www.gudy.com.tw/',
     show: false
 }, {
     name: 'Samsung Note3 行銷網站手機版',
@@ -162,7 +171,8 @@ var data = [{
     url: 'http://www.furoto.com.tw/',
     show: false
 }, {
-    name: 'Circles Channel 網站 (重製中)',
+    name: 'Circles Channel 網站',
+    url: 'http://channel.circles.tw/',
     show: false
 }, {
     name: '台北捷運 MOTA 系統',
