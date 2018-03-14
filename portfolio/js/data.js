@@ -59,8 +59,16 @@ var data = [{
     bgColor: '#FFF',
     bgSize: '80%'
 }, {
+    name: '2018 臺北渣打公益馬拉松',
+    url: 'http://scbmarathon.com/',
+    show: false
+}, {
     name: '安杰物業官方網站',
     url: 'http://www.a-just.com/',
+    show: false
+}, {
+    name: '輪胎市集購物網站(建置中)',
+    url: 'http://tire-market.com/',
     show: false
 }, {
     name: 'TOTO Washlet 感恩週年慶網站',
@@ -76,6 +84,10 @@ var data = [{
 }, {
     name: 'SwaddleDesigns Store',
     url: 'http://www.swaddledesigns.com.tw/',
+    show: false
+}, {
+    name: 'Mediplus 官方網站',
+    url: 'https://mediplus-orders.com.tw/',
     show: false
 }, {
     name: 'Discovery Shark Week 網站',
@@ -95,10 +107,6 @@ var data = [{
     thumbnail: 'url(img/hermin.png)',
     bgColor: '#262b3c',
     bgSize: 'inherit'
-}, {
-    name: 'Honda Accord Hybird 產品網站',
-    url: 'https://www.honda-taiwan.com.tw/auto/accord/index.html',
-    show: false
 }, {
     name: '誠品 ESLITE Gallery',
     url: 'http://www.eslitegallery.com/',
@@ -128,35 +136,12 @@ var data = [{
     url: 'http://demo.kei.tw/Cang-ai/',
     show: false
 }, {
-    name: 'GUDY 網路花店官方網站',
-    show: false
-}, {
-    name: 'Samsung Note3 行銷網站手機版',
-    url: 'http://demo.kei.tw/samsung/note3/',
-    show: false
-}, {
-    name: 'Samsung S5 行銷網站手機版',
-    url: 'http://demo.kei.tw/samsung/s5/',
-    show: false
-}, {
     name: '中央研究院遷台週年紀念網站',
     url: 'http://ash.asdc.sinica.edu.tw/',
     show: false
 }, {
-    name: 'Lofan 官方網站',
-    url: 'http://www.lofan.com.tw/',
-    show: false
-}, {
-    name: '師範大學教育研究集刊網站',
-    url: 'http://bulletin.isclub.com.tw/',
-    show: false
-}, {
     name: '米滋崎專業烘培網站',
     url: 'http://www.mizigi.com/',
-    show: false
-}, {
-    name: '台灣舉手網絡協會',
-    url: 'http://tw.liftinghands.net/',
     show: false
 }, {
     name: '跑客幫網站',
@@ -167,12 +152,42 @@ var data = [{
     url: 'http://www.myaena.net/',
     show: false
 }, {
-    name: 'FUROTO 福樂多醫療福祉事業',
-    url: 'http://www.furoto.com.tw/',
-    show: false
-}, {
     name: 'Circles Channel 網站',
     url: 'http://channel.circles.tw/',
+    show: false
+}, {
+    name: '台灣舉手網絡協會',
+    url: 'http://tw.liftinghands.net/',
+    show: false
+}, {
+    name: 'FUROTO 福樂多醫療福祉事業',
+    show: false
+}, {
+    name: 'CEO 極品靈芝咖啡',
+    show: false
+}, {
+    name: 'Honda CITY 活動網站',
+    show: false
+}, {
+    name: 'Honda Accord Hybird 產品網站',
+    show: false
+}, {
+    name: 'Honda 展示中心電子錶板',
+    show: false
+}, {
+    name: 'Marilyn 官方網站與管理系統',
+    show: false
+}, {
+    name: '三商美邦人壽鳳翔專案',
+    show: false
+}, {
+    name: '師範大學教育研究集刊網站',
+    show: false
+}, {
+    name: 'Lofan 官方網站',
+    show: false
+}, {
+    name: 'GUDY 網路花店官方網站',
     show: false
 }, {
     name: '台北捷運 MOTA 系統',
@@ -239,5 +254,11 @@ var data = [{
     show: false
 }, {
     name: '70s 整合行銷官方網站',
+    show: false
+}, {
+    name: 'Samsung Note3 行銷網站手機版',
+    show: false
+}, {
+    name: 'Samsung S5 行銷網站手機版',
     show: false
 }];

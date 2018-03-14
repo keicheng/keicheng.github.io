@@ -90,7 +90,8 @@ hr {
 }
 
 .avatar {
-    @include _circle(96px);
+    @include size(96px);
+    border-radius: 50%;
 }
 
 .work-list {
