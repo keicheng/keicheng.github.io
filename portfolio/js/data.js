@@ -63,14 +63,6 @@ var data = [{
     url: 'http://scbmarathon.com/',
     show: false
 }, {
-    name: '安杰物業官方網站',
-    url: 'http://www.a-just.com/',
-    show: false
-}, {
-    name: '輪胎市集購物網站(建置中)',
-    url: 'http://tire-market.com/',
-    show: false
-}, {
     name: 'TOTO Washlet 感恩週年慶網站',
     url: 'http://www.twtoto.com.tw/promotion/2015washlet_sale/index.html',
     show: false
@@ -152,15 +144,20 @@ var data = [{
     url: 'http://www.myaena.net/',
     show: false
 }, {
-    name: 'Circles Channel 網站',
-    url: 'http://channel.circles.tw/',
-    show: false
-}, {
     name: '台灣舉手網絡協會',
     url: 'http://tw.liftinghands.net/',
     show: false
 }, {
+    name: '輪胎市集購物網站(建置中)',
+    show: false
+}, {
     name: 'FUROTO 福樂多醫療福祉事業',
+    show: false
+}, {
+    name: 'Circles Channel 網站',
+    show: false
+}, {
+    name: '安杰物業官方網站',
     show: false
 }, {
     name: 'CEO 極品靈芝咖啡',
