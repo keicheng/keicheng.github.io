@@ -4,110 +4,34 @@
     left: 0;
     z-index: 2;
     width: 100%;
-    height: 116px;
-    padding: 16px 10px 5px;
-    background-color: #FFF;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.16);
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dfdfdf;
+    background: #FFF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-.container {
-    padding: 126px 10px 10px;
-}
+.wrap {
+    height: calc(100vh - 115px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 1rem;
 
-.btn-grp {
-    margin-bottom: 10px;
-}
-
-.filter {
-    display: inline-block;
-    margin: 0 10px;
-    vertical-align: top;
-}
-
-.verbs {
-    td {
-        white-space: nowrap;
-
-        a {
-            color: rgba(0,0,0,.87);
-        }
+    @media (min-width: 768px) {
+        height: calc(100vh - 73px);
     }
-
-    small {
-        display: none;
-
-        &:before {
-            content: '';
-            display: block;
-            width: 0;
-        }
-    }
-}
-
-.wrap th,
-.verbs td:first-child {
-    color: #7f7f7f;
 }
 
 .footer {
-    padding: 20px;
+    padding: 2rem 1rem;
     text-align: center;
-    font-size: 14px;
+    font-size: .875rem;
 }
 
-.filter-select {
-    display: inline-block;
-    max-width: 136px;
-}
+.irrverb {
+    opacity: 0;
+    transition: .75s ease-out;
 
-.badge {
-    margin-top: 9px;
-}
-
-@media (max-width: 767px) {
-    .table-responsive {
-        tbody {
-            td, th {
-                &:before {
-                    float: right;
-                    opacity: .5;
-                }
-            }
-
-            tr {
-                opacity: 0.3;
-                transition: .3s;
-
-                &.active {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    .verbs {
-        small {
-            display: block;
-        }
-    }
-
-    .table-responsive {
-        thead th,
-        tbody tr td:first-child {
-            color: #7f7f7f;
-            background-color: #f2f2f2;
-        }
-    }
-
-    .table-responsive {
-        tr {
-            td, th {
-                &:nth-child(2) {
-                    border-left-color: #bfbfbf;
-                }
-            }
-        }
+    &.loaded {
+        opacity: 1;
     }
 }
