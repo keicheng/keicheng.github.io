@@ -25,8 +25,7 @@
                 <header class="header container">
                     <div class="f-row f-align:j">
                         <div class="f-col@md:8">
-                            <span class="h3">不規則動詞三態表</span>
-                            <span class="label clr:dark">{{show.length}}</span>
+                            <h3>不規則動詞三態表</h3>
                         </div>
                         <hr class="hr-spacer sz:quarter u-hide@md">
                         <div class="f-col@md:4">
@@ -39,9 +38,9 @@
                                 </div>
                                 <div class="f-col:auto">
                                     <select class="input" v-model="filter" @change="irrverbFilter">
-                                        <option value="*">所有</option>
+                                        <option value="*">所有 ({{count}})</option>
                                         <option v-for="v, k in irrverb" :value="k">{{k.toUpperCase()}} ({{irrverb[k].length}})</option>
-                                        <option value="book">課本</option>
+                                        <option value="book">課本 ({{book.length}})</option>
                                     </select>
                                 </div>
                             </div>
@@ -88,7 +87,7 @@
         <!--Javascript-->
         <script type="text/javascript" src="js/kule.urbrowser.min.js"></script>
         <script type="text/javascript" src="js/vue.min.js"></script>
-        <script type="text/javascript" src="js/data.min.js"></script>
-        <script type="text/javascript" src="js/irrverb.min.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/irrverb.js"></script>
     </body>
 </html>

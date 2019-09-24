@@ -14,7 +14,7 @@ const irrverbs = [{
         'past': 'awoke \/ awakened',
         'part': 'awoken \/ awakened'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '倒退',
     'en': {
@@ -159,7 +159,7 @@ const irrverbs = [{
         'past': 'broadcast \/ broadcasted',
         'part': 'broadcast \/ broadcasted'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '嚇唬',
     'en': {
@@ -327,7 +327,7 @@ const irrverbs = [{
         'past': 'dove \/ dived',
         'part': 'dived'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '做 <small>(助動詞)</small>',
     'en': {
@@ -751,7 +751,7 @@ const irrverbs = [{
         'past': 'laid',
         'part': 'laid'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '領導；帶領',
     'en': {
@@ -759,7 +759,7 @@ const irrverbs = [{
         'past': 'led',
         'part': 'led'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '傾斜',
     'en': {
@@ -1375,7 +1375,7 @@ const irrverbs = [{
         'past': 'proved',
         'part': 'proven \/ proved'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '放置；置於',
     'en': {
@@ -1711,7 +1711,7 @@ const irrverbs = [{
         'past': 'rose',
         'part': 'risen'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '毛坯；塗粗灰泥於...',
     'en': {
@@ -1767,7 +1767,7 @@ const irrverbs = [{
         'past': 'sought',
         'part': 'sought'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '賣；銷售；出售',
     'en': {
@@ -1815,7 +1815,7 @@ const irrverbs = [{
         'past': 'shaved',
         'part': 'shaven \/ shaved'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '剪斷',
     'en': {
@@ -2543,7 +2543,7 @@ const irrverbs = [{
         'past': 'wove \/ weaved',
         'part': 'woven \/ weaved'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '與...結婚',
     'en': {
@@ -2559,7 +2559,7 @@ const irrverbs = [{
         'past': 'wept',
         'part': 'wept'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '浸潤',
     'en': {
@@ -2591,7 +2591,7 @@ const irrverbs = [{
         'past': 'withdrew',
         'part': 'withdrawn'
     },
-    'book': false
+    'book': true
 }, {
     'zh': '扣壓；保留',
     'en': {

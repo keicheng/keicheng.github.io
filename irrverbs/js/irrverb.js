@@ -5,14 +5,14 @@ new Vue({
         irrverb: {},
         book: [],
         show: [],
-        filter: '*',
+        filter: 'book',
         random: false,
-        loaded: false
+        loaded: false,
+        count: Object.keys(irrverbs).length
     },
 
     beforeMount() {
         const that = this;
-        that.show = JSON.parse(JSON.stringify(irrverbs));
 
         for (i in irrverbs) {
             let firstLetter = irrverbs[i].en.root.charAt(0);
@@ -27,6 +27,9 @@ new Vue({
                 that.book.push(irrverbs[i]);
             }
         }
+
+
+        that.show = JSON.parse(JSON.stringify(that.book));
     },
 
     mounted() {
