@@ -47,6 +47,8 @@ new Vue({
                     this.show = JSON.parse(JSON.stringify(this.book));
                 }
             }
+
+            this.random = false;
         },
 
         sortOrder() {
