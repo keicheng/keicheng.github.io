@@ -64,13 +64,13 @@
                                 <td class="u-align:c u-show@md">{{k+1}}</td>
                                 <td data-label="中文翻譯" v-html="v.zh"></td>
                                 <td data-label="原形動詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.root" target="_blank">{{v.en.root}}</a>
+                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.root" target="_blank" v-html="v.en.root"></a>
                                 </td>
                                 <td data-label="過去式">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.past" target="_blank">{{v.en.past}}</a>
+                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.past" target="_blank" v-html="v.en.past"></a>
                                 </td>
                                 <td data-label="過去分詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.part" target="_blank">{{v.en.part}}</a>
+                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.part" target="_blank" v-html="v.en.part"></a>
                                 </td>
                             </tr>
                             </tbody>

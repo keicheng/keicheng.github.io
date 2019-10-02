@@ -28,8 +28,10 @@ new Vue({
             }
         }
 
+        let hash = window.location.hash.replace(/^#/, '');
 
-        that.show = JSON.parse(JSON.stringify(that.book));
+        that.filter = hash.length ? hash : 'book';
+        that.irrverbFilter();
     },
 
     mounted() {
@@ -47,6 +49,9 @@ new Vue({
                     this.show = JSON.parse(JSON.stringify(this.book));
                 }
             }
+
+            this.random = false;
+            window.location.hash = this.filter;
         },
 
         sortOrder() {
