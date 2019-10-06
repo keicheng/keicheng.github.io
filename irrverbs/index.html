@@ -32,6 +32,9 @@
                         <div class="f-col@md:4">
                             <div class="f-row">
                                 <div class="f-col:auto">
+                                    <a class="btn clr:dark :square" href="test.html">
+                                        <i class="icon fas fa-spell-check"></i>
+                                    </a>
                                     <div class="btn-grp :united">
                                         <a class="btn :square" :class="{'clr:primary': !random}" @click="sortOrder">
                                             <i class="icon fas fa-sort-alpha-down"></i>
@@ -40,9 +43,6 @@
                                             <i class="icon fas fa-random"></i>
                                         </a>
                                     </div>
-                                    <a class="btn clr:dark :square" href="test.html">
-                                        <i class="icon fas fa-spell-check"></i>
-                                    </a>
                                 </div>
                                 <div class="f-col:auto">
                                     <select class="input" v-model="filter" @change="irrverbFilter">
