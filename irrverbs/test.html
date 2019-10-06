@@ -32,16 +32,8 @@
                         <div class="f-col@md:4">
                             <div class="f-row">
                                 <div class="f-col:auto">
-                                    <div class="btn-grp :united">
-                                        <a class="btn :square" :class="{'clr:primary': !random}" @click="sortOrder">
-                                            <i class="icon fas fa-sort-alpha-down"></i>
-                                        </a>
-                                        <a class="btn :square" :class="{'clr:primary': random}" @click="sortRandom">
-                                            <i class="icon fas fa-random"></i>
-                                        </a>
-                                    </div>
-                                    <a class="btn clr:dark :square" href="test.html">
-                                        <i class="icon fas fa-spell-check"></i>
+                                    <a class="btn clr:dark :square" href="index.html">
+                                        <i class="icon fas fa-home"></i>
                                     </a>
                                 </div>
                                 <div class="f-col:auto">
@@ -56,42 +48,30 @@
                     </div>
                 </header>
                 <main class="wrap">
-                    <div class="table-responsive-scroll" v-if="show.length">
-                        <table class="table :responsive-card :bordered :striped">
-                            <thead>
-                            <tr>
-                                <th width="3%"></th>
-                                <th width="21%">中文</th>
-                                <th width="25%">原形</th>
-                                <th width="25%">過去式</th>
-                                <th width="25%">過去分詞</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr class="active" v-for="v, k in show">
-                                <td class="u-align:c u-show@md">{{k+1}}</td>
-                                <td data-label="中文翻譯" v-html="v.zh"></td>
-                                <td data-label="原形動詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.root" target="_blank" v-html="v.en.root"></a>
-                                </td>
-                                <td data-label="過去式">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.past" target="_blank" v-html="v.en.past"></a>
-                                </td>
-                                <td data-label="過去分詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.part" target="_blank" v-html="v.en.part"></a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="test">
+                        <div class="verb" @click="answer">
+                            <div class="regular">{{show[testPage].en.root}}</div>
+                            <div class="past" :class="{'is:on': showKey}">
+                                <div class="item" v-html="show[testPage].en.past"></div>
+                                <div class="item" v-html="show[testPage].en.part"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="empty-tip" v-else><p>沒有任何資料</p></div>
+                    <div class="test-bottom">
+                        <button>
+                            <i class="far fa-arrow-alt-circle-left" @click="testPrev"></i>
+                        </button>
+                        <button>
+                            <i class="far fa-arrow-alt-circle-right" @click="testNext"></i>
+                        </button>
+                    </div>
                 </main>
             </div>
         </div>
 
         <!--Javascript-->
-        <script type="text/javascript" src="js/kule.urbrowser.min.js"></script>
-        <script type="text/javascript" src="js/vue.min.js"></script>
+        <script type="text/javascript" src="/assets/js/kule.urbrowser.min.js"></script>
+        <script type="text/javascript" src="/assets/js/vue.min.js"></script>
         <script type="text/javascript" src="js/data.min.js"></script>
         <script type="text/javascript" src="js/irrverb.min.js"></script>
     </body>

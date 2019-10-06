@@ -8,13 +8,19 @@ new Vue({
         filter: 'book',
         random: false,
         loaded: false,
-        count: Object.keys(irrverbs).length
+        count: Object.keys(irrverbs).length,
+        unit: null,
+        showKey: false,
+        testPage: 0
     },
 
     beforeMount() {
         const that = this;
+        const loc = location;
 
-        for (i in irrverbs) {
+        that.unit = loc.pathname.match(/test\.html/) ? 'test' : 'home';
+
+        for (let i in irrverbs) {
             let firstLetter = irrverbs[i].en.root.charAt(0);
 
             if (that.irrverb[firstLetter]) {
@@ -51,7 +57,13 @@ new Vue({
             }
 
             this.random = false;
-            window.location.hash = this.filter;
+            this.count = this.show.length;
+
+            if (this.unit != 'test') {
+                window.location.hash = this.filter;
+            } else {
+                this.sortRandom();
+            }
         },
 
         sortOrder() {
@@ -59,6 +71,7 @@ new Vue({
 
             that.show.sort((a, b)=>{
                 that.random = false;
+
                 if(a.en.root < b.en.root) { return -1; }
                 if(a.en.root > b.en.root) { return 1; }
             });
@@ -71,6 +84,28 @@ new Vue({
                 that.random = true;
                 return Math.random() > 0.5 ? -1 : 1
             });
+        },
+
+        answer() {
+            this.showKey = true;
+        },
+
+        testNext() {
+            this.testPage++;
+            this.showKey = false;
+
+            if (this.testPage >= this.count) {
+                this.testPage = 0;
+            }
+        },
+
+        testPrev() {
+            this.testPage--;
+            this.showKey = false;
+
+            if (this.testPage < 0) {
+                this.testPage = this.count - 1;
+            }
         }
     }
 });

@@ -427,7 +427,7 @@ const irrverbs = [{
 }, {
     'zh': '適應',
     'en': {
-        'root': 'fit (tailor, change size)',
+        'root': 'fit',
         'past': 'fit \/ fitted',
         'part': 'fit \/ fitted'
     },
@@ -475,7 +475,7 @@ const irrverbs = [{
 }, {
     'zh': '放棄；在...之前',
     'en': {
-        'root': 'forego (also forgo)',
+        'root': 'forego',
         'past': 'forewent',
         'part': 'foregone'
     },
