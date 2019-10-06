@@ -49,21 +49,25 @@
                 </header>
                 <main class="wrap">
                     <div class="test">
-                        <div class="verb" @click="answer">
+                        <div class="verb" @click="answer(show[testPage])">
+                            <div class="zh" v-html="show[testPage].zh"></div>
                             <div class="regular">{{show[testPage].en.root}}</div>
                             <div class="past" :class="{'is:on': showKey}">
-                                <div class="item" v-html="show[testPage].en.past"></div>
-                                <div class="item" v-html="show[testPage].en.part"></div>
+                                <div class="item">{{show[testPage].en.past}}</div>
+                                <div class="item">{{show[testPage].en.part}}</div>
+                                <div class="item" v-if="show[testPage].note"><small>{{show[testPage].note}}</small></div>
                             </div>
                         </div>
                     </div>
                     <div class="test-bottom">
-                        <button>
-                            <i class="far fa-arrow-alt-circle-left" @click="testPrev"></i>
-                        </button>
-                        <button>
-                            <i class="far fa-arrow-alt-circle-right" @click="testNext"></i>
-                        </button>
+                        <div class="test-bottom-inner">
+                            <button>
+                                <i class="far fa-arrow-alt-circle-left" @click="testPrev"></i>
+                            </button>
+                            <button>
+                                <i class="far fa-arrow-alt-circle-right" @click="testNext"></i>
+                            </button>
+                        </div>
                     </div>
                 </main>
             </div>

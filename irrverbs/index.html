@@ -56,7 +56,7 @@
                     </div>
                 </header>
                 <main class="wrap">
-                    <div class="table-responsive-scroll" v-if="show.length">
+                    <div class="table-responsive-scroll u-mgn-b:2rem" v-if="show.length">
                         <table class="table :responsive-card :bordered :striped">
                             <thead>
                             <tr>
@@ -72,13 +72,13 @@
                                 <td class="u-align:c u-show@md">{{k+1}}</td>
                                 <td data-label="中文翻譯" v-html="v.zh"></td>
                                 <td data-label="原形動詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.root" target="_blank" v-html="v.en.root"></a>
+                                    <button @click="speak(v.en.root)">{{v.en.root}}</button>
                                 </td>
                                 <td data-label="過去式">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.past" target="_blank" v-html="v.en.past"></a>
+                                    <button @click="speak(v.en.past)">{{v.en.past}}</button>
                                 </td>
                                 <td data-label="過去分詞">
-                                    <a :href="'https://translate.google.com.tw/#en/zh-TW/' + v.en.part" target="_blank" v-html="v.en.part"></a>
+                                    <button @click="speak(v.en.part)">{{v.en.part}}</button>
                                 </td>
                             </tr>
                             </tbody>

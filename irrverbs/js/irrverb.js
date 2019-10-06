@@ -1,3 +1,56 @@
+let synth;
+let utterance;
+let voice;
+
+let attempts = 0;
+
+function loadVoices() {
+    attempts++;
+
+    const voices = synth.getVoices();
+
+    if (voices.length) {
+        utterance.voice = voices.find(_voice => /en[_-]US/.test(_voice.lang))
+    }
+
+    if (!voice) {
+        if (attempts < 10) {
+            setTimeout(() => {
+                loadVoices();
+        }, 250);
+        } else {
+            console.error('voice not found.');
+        }
+    }
+}
+
+if ('speechSynthesis' in window) {
+    synth = window.speechSynthesis;
+    utterance = new SpeechSynthesisUtterance();
+
+    loadVoices();
+}
+
+function robotSpeak(text) {
+    let timer;
+
+    if (!synth || synth.speaking) {
+        return;
+    }
+
+    const output = text.replace(/(…|[._]{2,})/, '');
+
+    utterance.addEventListener('error', error => console.error(error));
+
+    utterance.lang = 'en-US';
+    utterance.text = output;
+    utterance.rate = 0.8;
+    utterance.pitch = 0.8;
+    utterance.volume = 1;
+
+    synth.speak(utterance);
+}
+
 new Vue({
     el: '#app',
 
@@ -86,8 +139,9 @@ new Vue({
             });
         },
 
-        answer() {
+        answer(data) {
             this.showKey = true;
+            this.speak(data.en.root + ', ' + data.en.past + ', ' + data.en.part);
         },
 
         testNext() {
@@ -106,6 +160,10 @@ new Vue({
             if (this.testPage < 0) {
                 this.testPage = this.count - 1;
             }
+        },
+
+        speak(text) {
+            robotSpeak(text);
         }
     }
 });

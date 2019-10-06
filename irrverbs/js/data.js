@@ -24,13 +24,14 @@ const irrverbs = [{
     },
     'book': false
 }, {
-    'zh': '是 <small>(助動詞)</small>',
+    'zh': '是',
     'en': {
         'root': 'be',
         'past': 'was \/ were',
         'part': 'been'
     },
-    'book': true
+    'book': true,
+    'note': '助動詞'
 }, {
     'zh': '承擔；忍受',
     'en': {
@@ -80,10 +81,10 @@ const irrverbs = [{
     },
     'book': false
 }, {
-    'zh': '告別 <small>(bid farewell)</small>',
+    'zh': '告別',
     'keyword': 'bid%20farewell',
     'en': {
-        'root': 'bid (farewell)',
+        'root': 'bid',
         'past': 'bid \/ bade',
         'part': 'bidden'
     },
@@ -91,11 +92,12 @@ const irrverbs = [{
 }, {
     'zh': '出價；投標',
     'en': {
-        'root': 'bid (offer amount)',
+        'root': 'bid',
         'past': 'bid',
         'part': 'bid'
     },
-    'book': false
+    'book': false,
+    'note': 'offer amount'
 }, {
     'zh': '綁定；綑綁',
     'en': {
@@ -329,13 +331,14 @@ const irrverbs = [{
     },
     'book': true
 }, {
-    'zh': '做 <small>(助動詞)</small>',
+    'zh': '做',
     'en': {
         'root': 'do',
         'past': 'did',
         'part': 'done'
     },
-    'book': true
+    'book': true,
+    'note': '助動詞'
 }, {
     'zh': '繪製；繪畫',
     'en': {
@@ -812,10 +815,11 @@ const irrverbs = [{
     'zh': '躺；趴；臥',
     'en': {
         'root': 'lie',
-        'past': 'lay <small>(翻譯為謊言時：lied)</small>',
-        'part': 'lain <small>(翻譯為謊言時：lied)</small>'
+        'past': 'lay',
+        'part': 'lain '
     },
-    'book': true
+    'book': true,
+    'note': '翻譯為謊言時則過去式與過去分詞為 lied'
 }, {
     'zh': '點燃；發光',
     'en': {
@@ -1524,10 +1528,11 @@ const irrverbs = [{
     'zh': '重鋪',
     'en': {
         'root': 'relay (for example tiles)',
-        'past': 'relaid <small>(翻譯為中繼、傳遞時：relayed)</small>',
-        'part': 'relaid <small>(翻譯為中繼、傳遞時：relayed)'
+        'past': 'relaid',
+        'part': 'relaid'
     },
-    'book': false
+    'book': false,
+    'note': '翻譯為中繼、傳遞時過去式與過去分詞為 relayed'
 }, {
     'zh': '重修；重新學習',
     'en': {
