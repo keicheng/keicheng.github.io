@@ -1,18 +1,28 @@
 var data = [{
-    name: 'Kule Lazy',
-    url: 'http://www.kule.tw/',
+    name: 'Kule Lazy 4',
+    url: 'https://lazy4.kule.tw/',
+    show: true,
+    thumbnail: 'url(img/lazy4.png)'
+}, {
+    name: 'Kule urBrowser',
+    url: 'https://urbrowsr.kule.tw/',
     show: true,
     thumbnail: 'url(img/kule.png)'
 }, {
-    name: 'DOTCH!',
-    url: 'https://dotch.today',
+    name: 'Match Data Management Platform',
+    url: 'https://jrvix.xyz/',
     show: true,
-    thumbnail: 'url(img/dotch.jpg)'
+    thumbnail: 'url(img/dmp.png)'
 }, {
-    name: '單字卡',
-    url: 'https://eng.kei.tw',
+    name: '邁圈數位行銷官方網站',
+    url: 'https://matcher.tw/',
     show: true,
-    thumbnail: 'url(img/words.jpg)'
+    thumbnail: 'url(img/match.png)'
+}, {
+    name: 'Huawei Next Image 2019',
+    url: 'https://nextimage2019.matcher.tw/',
+    show: true,
+    thumbnail: 'url(img/nextimage2019.png)'
 }, {
     name: '美國關島政府觀光網站',
     url: 'http://47.88.171.175/guam2017',
@@ -45,9 +55,19 @@ var data = [{
     bgColor: '#FFF',
     bgSize: '80%'
 }, {
+    name: 'Etude House 2020 活動網站',
+    url: 'https://faceblur.etudehouseevent.tw/',
+    show: false,
+    thumbnail: 'url(img/etudehouse.png)',
+}, {
+    name: '逗點設計官方網站',
+    url: 'http://www.dotted.com.tw/',
+    show: true,
+    thumbnail: 'url(img/dotted.png)',
+}, {
     name: 'Circles 商務社群網站',
     url: 'https://www.circles.tw/',
-    show: true,
+    show: false,
     thumbnail: 'url(img/circles.png)',
     bgColor: '#45a7b9',
     bgSize: '100%'
@@ -59,7 +79,7 @@ var data = [{
     bgColor: '#FFF',
     bgSize: '80%'
 }, {
-    name: '2018 臺北渣打公益馬拉松',
+    name: '臺北渣打公益馬拉松',
     url: 'http://scbmarathon.com/',
     show: false
 }, {
@@ -79,11 +99,7 @@ var data = [{
     show: false
 }, {
     name: 'Mediplus 官方網站',
-    url: 'https://mediplus-orders.com.tw/',
-    show: false
-}, {
-    name: 'Discovery Shark Week 網站',
-    url: 'http://demo.kei.tw/shark2/',
+    url: 'https://www.mediplus.tw/',
     show: false
 }, {
     name: '三槍官方網站',
@@ -100,40 +116,12 @@ var data = [{
     bgColor: '#262b3c',
     bgSize: 'inherit'
 }, {
-    name: '誠品 ESLITE Gallery',
-    url: 'http://www.eslitegallery.com/',
-    show: false
-}, {
-    name: 'Buyble 官方網站',
-    url: 'http://demo.kei.tw/Buyble/',
-    show: false
-}, {
-    name: '逗點設計官方網站 (含後台)',
-    url: 'http://www.dotted.com.tw/',
-    show: false
-}, {
     name: '銘島設計官方網站',
-    url: 'http://demo.kei.tw/mingisland/',
-    show: false
-}, {
-    name: 'urBonus 紅利王網站',
-    url: 'http://demo.kei.tw/urbonus/',
-    show: false
-}, {
-    name: 'booteeke 官方網站',
-    url: 'http://demo.kei.tw/booteeke',
-    show: false
-}, {
-    name: '藏愛精緻婚紗官方網站',
-    url: 'http://demo.kei.tw/Cang-ai/',
+    url: 'https://mingisland.com/',
     show: false
 }, {
     name: '中央研究院遷台週年紀念網站',
     url: 'http://ash.asdc.sinica.edu.tw/',
-    show: false
-}, {
-    name: '米滋崎專業烘培網站',
-    url: 'http://www.mizigi.com/',
     show: false
 }, {
     name: '跑客幫網站',
@@ -148,7 +136,29 @@ var data = [{
     url: 'http://tw.liftinghands.net/',
     show: false
 }, {
-    name: '輪胎市集購物網站(建置中)',
+    name: '輪胎市集購物網站',
+    url: 'https://mowomarket.com/',
+    show: false
+}, {
+    name: '誠品 ESLITE Gallery',
+    show: false
+}, {
+    name: '米滋崎專業烘培網站',
+    show: false
+}, {
+    name: 'Discovery Shark Week 網站',
+    show: false
+}, {
+    name: 'Buyble 官方網站',
+    show: false
+}, {
+    name: 'urBonus 紅利王網站',
+    show: false
+}, {
+    name: 'booteeke 官方網站',
+    show: false
+}, {
+    name: '藏愛精緻婚紗官方網站',
     show: false
 }, {
     name: 'FUROTO 福樂多醫療福祉事業',
