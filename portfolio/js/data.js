@@ -10,8 +10,8 @@ var data = [{
     thumbnail: 'url(img/kule.png)'
 }, {
     name: 'Match Data Management Platform',
-    url: 'https://jrvix.xyz/',
-    show: true,
+    //url: 'https://jrvix.xyz/',
+    show: false,
     thumbnail: 'url(img/dmp.png)'
 }, {
     name: '邁圈數位行銷官方網站',
@@ -61,8 +61,8 @@ var data = [{
     thumbnail: 'url(img/etudehouse.png)',
 }, {
     name: '逗點設計官方網站',
-    url: 'http://www.dotted.com.tw/',
-    show: true,
+    //url: 'http://www.dotted.com.tw/',
+    show: false,
     thumbnail: 'url(img/dotted.png)',
 }, {
     name: 'Circles 商務社群網站',
@@ -88,7 +88,7 @@ var data = [{
     show: false
 }, {
     name: 'Yoomi Taiwan 官方網站',
-    url: 'http://www.yoomi.com.tw/',
+    url: 'http://yoomi.kei.tw/',
     show: true,
     thumbnail: 'url(img/yoomi.png)',
     bgColor: '#fabd1a',
@@ -165,12 +165,15 @@ var data = [{
     show: false
 }, {
     name: 'Circles Channel 網站',
+    url: 'https://channel.circles.tw/',
     show: false
 }, {
     name: '安杰物業官方網站',
+    url: 'http://www.a-just.com/',
     show: false
 }, {
     name: 'CEO 極品靈芝咖啡',
+    url: 'http://www.doublecrane.com.tw/111/creation.php',
     show: false
 }, {
     name: 'Honda CITY 活動網站',
