@@ -190,7 +190,7 @@ var data = {
 				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: '博霖租車',
-				url: 'hhttps://www.brilliant-vip.com/',
+				url: 'https://www.brilliant-vip.com/',
 				show: false,
 				thumbnail: 'img/brilliant.png',
 				jobtitle: ['前端'],
