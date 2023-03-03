@@ -1,13 +1,21 @@
 var data = {
 	projects: [
 		{
-				name: '光陽 Ionex 官方網站',
+				name: '光陽 Ionex 台灣官方網站',
 				url: 'https://www.ionex.com.tw/',
 				show: true,
 				thumbnail: 'img/ionex.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD'],
-				content: '光陽電動車官方網站。獨自一人開發。使用 Vue 與 Nuxt 框架，所有前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
+				content: '光陽電動車官方網站。獨自一人開發，協助設計師規劃設計 Guideline，讓設計元素組件化。使用 Vue 與 Nuxt 框架，所有前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
+		}, {
+				name: '光陽 Ionex 國際官方網站',
+				url: 'https://ionexglobal.kei.tw/',
+				show: true,
+				thumbnail: 'img/ionex.png',
+				jobtitle: ['前端'],
+				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD'],
+				content: '光陽電動車國際宣傳網站。獨自一人開發，協助設計師規劃設計 Guideline，讓設計元素組件化。使用 Vue 與 Nuxt 框架，所有前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
 		}, {
 				name: '光陽 Ionex 據點服務',
 				url: 'https://map.ionex.com.tw/',
