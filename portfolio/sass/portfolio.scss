@@ -1,8 +1,3 @@
-@import 'kule/core/mixins';
-@import 'kule/core/functions';
-@import 'kule/css3';
-@import 'kule/reset';
-
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700);
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700);
 
@@ -90,54 +85,22 @@ hr {
 }
 
 .avatar {
-    @include size(96px);
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
 }
 
-.work-list {
-    @include display(flex);
-    @include flex-wrap(wrap);
-    @include flex-direction(row);
-    @include align-items(stretch);
-    @include justify-content(center);
-    max-width: 660px;
-    margin: auto;
-
-    .item {
-        max-width: 100%;
-        @include flex(1 1 100%);
-        border: 5px solid #FFF;
-        border-radius: 32px;
-        background: #f8f8f8;
-    }
-
-    .item-content {
-        padding-top: 100%;
-    }
-
-    @media (min-width: 375px) {
-        .item {
-            max-width: 50%;
-            @include flex(1 1 50%);
-        }
-    }
-
-    @media (min-width: 768px) {
-        padding: 20px;
-
-        .item {
-            max-width: (100%/3);
-            @include flex(1 1 (100%/3));
-        }
-    }
+.infoitem .meta {
+    margin-bottom: 0;
 }
 
-.item-content {
-    display: block;
-    border-radius: 32px;
-    background: {
-        repeat: no-repeat;
-        position: center;
-        size: cover;
-    }
+.infoitem_txt {
+    margin-top: 0;
+    font-size: 14px;
+}
+
+.embed {
+    border-radius: 8px;
+    box-shadow: 0 0 1px rgba(#000, .54);
+    filter: drop-shadow(0 3px 12px rgba(#000, .06))
 }

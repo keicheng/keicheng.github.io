@@ -11,6 +11,8 @@
         <link rev="made" title="Author Web" href="https://www.kei.tw/" />
         <link rel="Shortcut icon" href="https://www.kei.tw/img/favicon.ico" />
         <link rel="Bookmark" href="https://www.kei.tw/img/favicon.ico" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kuletw/lazy@4.6/dist/css/lazy4.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kuletw/lazy@4.6/dist/css/lazy4-colours.css">
         <link rel="stylesheet" href="css/portfolio.css" />
     </head>
     <body>
@@ -22,44 +24,83 @@
                     </div>
                     <div class="intro">
                         <h2>嗨！我是 Kei</h2>
-                        <p>來自台北，曾就讀松山商職廣告設計科與台灣科技大學工商業設計系。早期從事網頁視覺設計，近年皆以網頁前端為主，也有接觸 PHP 與後台建置。<br />曾經開發過 CSS Framework。</p>
+                        <p>來自台北，曾就讀松山商職廣告設計科與台灣科技大學工商業設計系。早期從事網頁視覺設計，近年皆以網頁前端為主，稍有接觸 PHP 與後台建置。曾自行開發 CSS Framework。</p>
+                        <p>除了工作之外，閒暇之餘會執行 Side Project，將常需要的資訊彙整起來以便後續使用時能更節省時間。</p>
                         <dl>
                             <dt>使用的技能</dt>
-                            <dd>HTML, CSS/Sass/Scss/Less, Javascript(ES5, ES6+), jQuery, Ajax, JSON, Vue.js, PHP, SQL, SEO, Schema, PWA, Git</dd>
+                            <dd>HTML, CSS/Sass/Scss/Less, Javascript(ES5, ES6+), jQuery, Ajax, JSON, Vue.js, Nuxt, Schema, PWA, Git</dd>
                             <dt>使用的系統</dt>
-                            <dd>macOS, Windows, Linux (CentOS, Ubuntu)</dd>
+                            <dd>macOS, Linux (CentOS, Ubuntu)</dd>
                             <dt>使用的軟體與工具</dt>
-                            <dd>Sublime, VS Code, PHPStorm, Sketch, Adobe XD, Photoshop, Illusrator, XMind, iTerm2</dd>
+                            <dd>VS Code, Sketch, Adobe Photoshop, Illusrator, Figma</dd>
                         </dl>
                         <h4>與我聯繫</h4>
                         <p>如有任何工作上的合作需求或是聊聊簡單打個招呼，您可透過以下方式與我聯繫：</p>
                         <ul>
                             <li>info@kei.tw</li>
                             <li><a href="https://github.com/keicheng" target="_blank">https://github.com/keicheng</a></li>
-                            <li><a href="https://www.facebook.com/kule.tw" target="_blank">https://www.facebook.com/kule.tw</a></li>
                         </ul>
                         <hr />
                         <div class="works">
-                            <div class="work-list">
-                                <div class="item" v-for="(v, key) in shows">
-                                    <a class="item-content"
-                                        :style="{
-                                            backgroundImage: v.thumbnail,
-                                            backgroundColor: v.bgColor,
-                                            backgroundSize: v.bgSize
-                                        }"
-                                        :href="v.url"
-                                        target="_blank">
-                                    </a>
+                            <div v-for="item in sides" class="infoitem f-row u-mB:50">
+                                <div class="infoitem_col :fixed f-col@md:5">
+                                    <component :is="'url' in item ? 'a' : 'div'" :href="'url' in item ? item.url : null"
+                                        :target="'url' in item ? '_blank' : null" class="embed">
+                                        <span class="embed_media" :style="`background-image: url('${item.thumbnail}')`"></span>
+                                        <img :src="item.thumbnail" :alt="item.name">
+                                    </component>
+                                </div>
+                                <div class="infoitem_col :fluid f-col">
+                                    <h4 class="infoitem_title">{{item.name}}</h4>
+                                    <div class="meta">
+                                        <span v-for="v in item.jobtitle" class="label u-mR:10" :class="{
+                                                                            'clr:primary': v === '前端',
+                                                                            'clr:sapphire': v === '設計',
+                                                                            'clr:dark': v !== '前端' && v !== '設計'
+                                                                        }">
+                                            {{v}}
+                                        </span>
+                                        <span v-for="v in item.tech" class="meta_item">{{v}}</span>
+                                    </div>
+                                    <p class="infoitem_txt">{{ item.content }}</p>
+                                    <div class="u-fs:xs" v-if="'url' in item">
+                                        <a target="_blank" :href="item.url">開啟連結</a>
+                                    </div>
                                 </div>
                             </div>
-                            <hr />
-                            <div class="wrap">
-                                <h4>專案與經歷</h4>
-                                <ol>
-                                    <li v-for="(v, key) in works" v-html="renderItem(v)"></li>
-                                </ol>
-                                <span>...</span>
+                            <div class="divider"></div>
+                            <div v-for="item in projects" class="infoitem f-row u-mB:50">
+                                <div class="infoitem_col :fixed f-col@md:5">
+                                    <component
+                                        :is="'url' in item ? 'a' : 'div'"
+                                        :href="'url' in item ? item.url : null"
+                                        :target="'url' in item ? '_blank' : null"
+                                        class="embed"
+                                    >
+                                        <span class="embed_media" :style="`background-image: url('${item.thumbnail}')`"></span>
+                                        <img :src="item.thumbnail" :alt="item.name">
+                                    </component>
+                                </div>
+                                <div class="infoitem_col :fluid f-col">
+                                    <h4 class="infoitem_title">{{item.name}}</h4>
+                                    <div class="meta">
+                                        <span v-for="v in item.jobtitle"
+                                            class="label u-mR:10"
+                                            :class="{
+                                                'clr:primary': v === '前端',
+                                                'clr:sapphire': v === '設計',
+                                                'clr:dark': v !== '前端' && v !== '設計'
+                                            }"
+                                        >
+                                            {{v}}
+                                        </span>
+                                        <span v-for="v in item.tech" class="meta_item">{{v}}</span>
+                                    </div>
+                                    <p class="infoitem_txt">{{ item.content }}</p>
+                                    <div class="u-fs:xs" v-if="'url' in item">
+                                        <a target="_blank" :href="item.url">開啟連結</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -69,6 +110,6 @@
         <script src="js/data.js"></script>
         <script src="js/vue.min.js"></script>
         <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/app.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
