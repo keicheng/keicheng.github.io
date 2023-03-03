@@ -71,7 +71,7 @@ var data = {
 				thumbnail: 'img/caware.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果呈現'
+				content: '負責全站前端開發，包含頁面製作、動態效果呈現'
 		}, {
 				name: '金愛斯佳',
 				url: 'https://www.ostricare.com.tw/',
@@ -79,7 +79,7 @@ var data = {
 				thumbnail: 'img/ostricare.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果呈現'
+				content: '負責全站前端開發，包含頁面製作、動態效果呈現'
 		}, {
 				name: 'Match Data Management Platform',
 				//url: 'https://jrvix.xyz/',
@@ -95,7 +95,7 @@ var data = {
 				thumbnail: 'img/match.png',
 				jobtitle: ['全端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
-				content: '全站開發，包含頁面製作、動態效果、資料串接、後台開發'
+				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: 'Huawei Next Image 2019',
 				url: 'https://nextimage2019.kei.tw/',
@@ -103,7 +103,7 @@ var data = {
 				thumbnail: 'img/nextimage2019.png',
 				jobtitle: ['全端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
-				content: '全站開發，包含頁面製作、動態效果、資料串接、後台開發'
+				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: '美國關島政府觀光網站',
 				//url: 'http://47.88.171.175/guam2017',
@@ -111,7 +111,7 @@ var data = {
 				thumbnail: 'img/guam.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果、資料串接'
+				content: '負責前端開發，包含頁面製作、動態效果、資料串接'
 		}, {
 				name: '麗緻餐旅集團官方網站',
 				url: 'http://www.landishotelsresorts.com/',
@@ -119,7 +119,7 @@ var data = {
 				thumbnail: 'img/landis.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
+				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: '亞緻餐飲官方網站',
 				url: 'http://www.lizdining.com/',
@@ -129,7 +129,7 @@ var data = {
 				bgSize: '100%',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
+				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: 'Yoomi Taiwan 官方網站',
 				url: 'https://yoomi.kei.tw/',
@@ -139,7 +139,7 @@ var data = {
 				bgSize: 'inherit',
 				jobtitle: ['前端', '設計'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '視覺設計、前端開發、動態效果製作'
+				content: '負責視覺設計、前端開發、動態效果製作'
 		}, {
 				name: '京嘉光電官方網站',
 				url: 'http://janjia.com/',
@@ -149,7 +149,7 @@ var data = {
 				bgSize: '80%',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
+				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: '七福廣告官方網站',
 				url: 'http://www.chiefadv.com/',
@@ -159,7 +159,7 @@ var data = {
 				bgSize: '80%',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果'
+				content: '負責前端開發，包含頁面製作、動態效果'
 		}, {
 				name: '逗點設計官方網站',
 				//url: 'http://www.dotted.com.tw/',
@@ -167,7 +167,7 @@ var data = {
 				thumbnail: 'img/dotted.png',
 				jobtitle: ['全端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'PHP'],
-				content: '全站開發，包含頁面製作、動態效果、資料串接、後台開發'
+				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: 'Circles 商務社群網站',
 				url: 'https://www.circles.tw/',
@@ -177,7 +177,7 @@ var data = {
 				bgSize: '100%',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '全站前端開發，包含頁面製作、資料串接、功能應用'
+				content: '負責前端開發，包含頁面製作、資料串接、功能應用'
 		}, {
 				name: '遊戲橘子官方網站',
 				url: 'http://www.gamania.com/',
@@ -187,7 +187,7 @@ var data = {
 				bgSize: '80%',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
+				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: '博霖租車',
 				url: 'https://www.brilliant-vip.com/',
@@ -195,7 +195,7 @@ var data = {
 				thumbnail: 'img/brilliant.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
-				content: '全站前端開發，包含頁面製作、動態效果、資料串接與處理、功能應用'
+				content: '負責需求訪談、前端規劃與開發，包含頁面製作、動態效果、資料串接與處理、功能應用'
 		}, {
 				name: '臺北渣打公益馬拉松',
 				url: 'http://scbmarathon.com/',
@@ -203,7 +203,7 @@ var data = {
 				thumbnail: 'img/scbmarathon.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、動態效果、功能應用'
+				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: 'Mediplus 官方網站',
 				thumbnail: 'img/mediplus.png',
@@ -211,7 +211,7 @@ var data = {
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: '三槍官方網站',
 				url: 'https://www.3gun.com.tw/',
@@ -221,7 +221,7 @@ var data = {
 				bgSize: 'inherit',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: 'Hermin 官方網站',
 				url: 'http://www.hermin.com/',
@@ -231,7 +231,7 @@ var data = {
 				bgSize: 'inherit',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: '銘島設計官方網站',
 				url: 'https://mingisland.com/',
@@ -239,7 +239,7 @@ var data = {
 				thumbnail: 'img/mingisland.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: '跑客幫網站',
 				url: 'https://bring4u.tw/',
@@ -247,42 +247,43 @@ var data = {
 				thumbnail: 'img/bring4u.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用、串接API'
+				content: '獨自一人負責所有網站前端開發，包含頁面製作、功能應用、串接API'
 		}, {
-				name: '台灣舉手網絡協會',
+				name: '台灣舉手網絡協會（新版製作，尚未上線）',
 				thumbnail: 'img/liftinghands.png',
 				url: 'http://tw.liftinghands.net/',
 				show: false,
 				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript']
+				tech: ['HTML', 'CSS', 'Javascript'],
+				content: '負責前端開發，包含頁面製作、功能應用、串接API等'
 		}, {
 				name: '誠品 ESLITE Gallery',
 				thumbnail: 'img/eslite.png',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '誠品週年紀念影像展覽。負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: 'Buyble 官方網站',
 				thumbnail: 'img/buyble.png',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '官方網站製作，負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: 'Marilyn 官方網站與管理系統',
 				thumbnail: 'img/marilyn.png',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，後台介面製作、功能應用、資料計算'
+				content: '負責前端開發，後台介面製作、功能應用、資料計算'
 		}, {
 				name: '台北捷運 MOTA 系統',
 				thumbnail: 'img/mota.jpeg',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '全站前端開發，包含頁面製作、功能應用'
+				content: '台北捷運觀光導覽系統。過去曾展示於捷運站內供旅客使用，可查詢每個站點周遭景點。負責前端開發，包含頁面製作、功能應用'
 		}
 	],
 
