@@ -87,7 +87,7 @@ var data = {
 				thumbnail: 'img/ostricare.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
-				content: '負責全站前端開發，包含頁面製作、動態效果呈現'
+				content: '知名嬰、幼兒奶粉網站，負責全站前端開發，包含頁面製作、動態效果呈現'
 		}, {
 				name: 'Match Data Management Platform',
 				//url: 'https://jrvix.xyz/',
@@ -95,7 +95,7 @@ var data = {
 				thumbnail: 'img/dmp.png',
 				jobtitle: ['專案管理', '前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
-				content: '需求分析、功能規劃、時程安排、介面設計、前端開發'
+				content: '行銷數據蒐集平台。用於蒐集使用者行為數據並且分析各種行銷人員需要的結果，可供行銷人員分析廣告投放需要具備的訊息。負責需求分析、功能規劃、時程安排、介面設計、前端開發'
 		}, {
 				name: '邁圈數位行銷官方網站',
 				url: 'https://match.kei.tw/',
@@ -103,7 +103,7 @@ var data = {
 				thumbnail: 'img/match.png',
 				jobtitle: ['全端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
-				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
+				content: '官方形象網站，負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: 'Huawei Next Image 2019',
 				url: 'https://nextimage2019.kei.tw/',
@@ -111,7 +111,7 @@ var data = {
 				thumbnail: 'img/nextimage2019.png',
 				jobtitle: ['全端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
-				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
+				content: '華為年度攝影比賽。負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: '美國關島政府觀光網站',
 				//url: 'http://47.88.171.175/guam2017',
@@ -119,7 +119,7 @@ var data = {
 				thumbnail: 'img/guam.png',
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '負責前端開發，包含頁面製作、動態效果、資料串接'
+				content: '美國關島政府宣傳旅遊網站，負責前端開發，包含頁面製作、動態效果、資料串接'
 		}, {
 				name: '麗緻餐旅集團官方網站',
 				url: 'http://www.landishotelsresorts.com/',
@@ -139,7 +139,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
-				name: 'Yoomi Taiwan 官方網站',
+				name: '2012 Yoomi Taiwan 官方網站',
 				url: 'https://yoomi.kei.tw/',
 				show: true,
 				thumbnail: 'img/yoomi.png',
