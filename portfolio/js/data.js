@@ -118,14 +118,6 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '留學代辦網站。全站前端開發，包含頁面製作、功能操作等'
 		}, {
-				name: '凱舟濾材',
-				url: 'https://www.caware.com.tw/',
-				show: true,
-				thumbnail: 'img/caware.png',
-				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '負責全站前端開發，包含頁面製作、動態效果呈現'
-		}, {
 				name: '金愛斯佳',
 				url: 'https://www.ostricare.com.tw/',
 				show: true,
@@ -193,16 +185,6 @@ var data = {
 				jobtitle: ['前端', '設計'],
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責視覺設計、前端開發、動態效果製作'
-		}, {
-				name: '京嘉光電官方網站',
-				url: 'http://janjia.com/',
-				show: true,
-				thumbnail: 'img/janjia.png',
-				bgColor: '#FFF',
-				bgSize: '80%',
-				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
-				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
 				name: '七福廣告官方網站',
 				url: 'http://www.chiefadv.com/',
@@ -323,7 +305,7 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Vue3/Nuxt3', 'RWD', 'Tailwind', 'MongoDB'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Vue3/Nuxt3', 'RWD', 'Tailwind', 'MongoDB', 'Leaflet'],
 			content: '將台灣山岳與基石資料彙整，可隨時查閱與地圖瀏覽。同時可查詢日出日落時間、距離計算、座標轉換、坡度概算等等功能'
 		},
 		{
@@ -332,7 +314,7 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet'],
 			content: '讓山友可回報山岳與基石狀況，同時同步更新於台灣山岳'
 		},
 		{
@@ -341,8 +323,17 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet'],
 			content: '讓山友可回報宿營地、水源、路況等資訊，讓準備上山的山友們行前準備可獲得更完善的資訊與規劃，進而降低登山風險。'
+		},
+		{
+			name: 'GPX CONCAT',
+			url: 'https://gpx.suann.net/',
+			show: true,
+			thumbnail: 'img/gpxconcat.png',
+			jobtitle: ['開發者'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Leaflet'],
+			content: '用於彙整不同GPS軌跡檔案，支援 GPX, KML, KMZ 等格式，並且可重新整合、新增據點、匯出檔案。符合 GPX 1.1 規範。'
 		},
 		{
 			name: 'Kule Lazy 4',
