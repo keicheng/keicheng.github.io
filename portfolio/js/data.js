@@ -33,7 +33,7 @@ var data = {
 				show: true,
 				thumbnail: 'img/gobytrain.png',
 				jobtitle: ['前端', '產品系統規劃'],
-				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Docker', 'Nginx'],
+				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Redis', 'Docker', 'Nginx'],
 				content: '專案執行中。飛達旅遊網站改版，整合 ERP 產品資料與網站資料，使用前後端分離技術與串接 API，讓使用者可在網站上購買旅遊通行證、火車票、旅遊行程等等。'
 		},
 		{
@@ -42,7 +42,7 @@ var data = {
 				show: true,
 				thumbnail: 'img/everrich.png',
 				jobtitle: ['前端', '產品系統規劃'],
-				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Docker', 'Nginx'],
+				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Redis', 'Docker', 'Nginx'],
 				content: '專案執行中。改版原有官網，並且搭配 Redis 降低後端負擔。使用 Nuxt 3 進行前後端分離，並且使用 Docker 封裝。'
 		},
 		{
@@ -70,12 +70,12 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '光陽電動車據點資料，可供使用者查詢充電站、門市等資料。全站前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
 		}, {
-				name: '聯齊能源物聯網',
+				name: '2021 聯齊能源物聯網',
 				//url: 'https://map.ionex.com.tw/',
 				show: true,
 				thumbnail: 'img/nextdrive.png',
 				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD'],
+				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt2', 'RWD'],
 				content: '與國小單位配合，將每日使用太陽能與台電用電資料做整合，以視覺化方式呈現給校方，讓校方能夠得知每日用電狀況，並且做再生能源推廣。獨自一人前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
 		}, {
 				name: 'MoWo Market 摩物市集',
@@ -86,7 +86,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '提供機車騎士輪胎、周邊等用品。全站介面設計、前端開發，包含頁面製作、功能應用、串接API、功能應用'
 		}, {
-				name: '龍巖禮儀服務',
+				name: '2022 龍巖禮儀服務',
 				url: 'https://www.lyls.com.tw/',
 				show: true,
 				thumbnail: 'img/lyls.png',
@@ -94,7 +94,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '全站前端開發，包含頁面製作、功能操作等'
 		}, {
-				name: '世基生物醫學基因檢測系統',
+				name: '2021 世基生物醫學基因檢測系統',
 				//url: 'https://pharmigene.com.tw/',
 				show: false,
 				thumbnail: 'img/pharmigene.png',
@@ -102,7 +102,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '世基基因檢測系統，提供給用戶查詢檢測結果，並提醒用藥是否安全。全站介面設計與前端開發，包含頁面製作、功能操作等'
 		}, {
-				name: 'Icy Box',
+				name: '2021 Icy Box',
 				url: 'https://icybox.de/',
 				show: true,
 				thumbnail: 'img/icybox.png',
@@ -110,7 +110,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '3C 產品電商網站。全站前端開發，包含頁面製作、功能操作等'
 		}, {
-				name: 'EDJILE',
+				name: '2017 EDJILE',
 				url: 'https://www.edjile.com/',
 				show: true,
 				thumbnail: 'img/edjile.png',
@@ -118,7 +118,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '留學代辦網站。全站前端開發，包含頁面製作、功能操作等'
 		}, {
-				name: '金愛斯佳',
+				name: '2020 金愛斯佳',
 				url: 'https://www.ostricare.com.tw/',
 				show: true,
 				thumbnail: 'img/ostricare.png',
@@ -126,20 +126,20 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '知名嬰、幼兒奶粉網站，負責全站前端開發，包含頁面製作、動態效果呈現'
 		}, {
-				name: 'Match Data Management Platform',
+				name: '2020 Match Data Management Platform',
 				//url: 'https://jrvix.xyz/',
 				show: false,
 				thumbnail: 'img/dmp.png',
 				jobtitle: ['專案管理', '前端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
+				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'GA', 'Pixel'],
 				content: '行銷數據蒐集平台。用於蒐集使用者行為數據並且分析各種行銷人員需要的結果，可供行銷人員分析廣告投放需要具備的訊息。負責需求分析、功能規劃、時程安排、介面設計、前端開發'
 		}, {
-				name: '邁圈數位行銷官方網站',
+				name: '2019 邁圈數位行銷官方網站',
 				url: 'https://match.kei.tw/',
 				show: true,
 				thumbnail: 'img/match.png',
 				jobtitle: ['全端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
+				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'MySQL', 'RWD'],
 				content: '官方形象網站，負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
 				name: 'Huawei Next Image 2019',
@@ -147,10 +147,10 @@ var data = {
 				show: false,
 				thumbnail: 'img/nextimage2019.png',
 				jobtitle: ['全端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'RWD'],
+				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'MySQL', 'RWD'],
 				content: '華為年度攝影比賽。負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
-				name: '美國關島政府觀光網站',
+				name: '2018 美國關島政府觀光網站',
 				//url: 'http://47.88.171.175/guam2017',
 				show: true,
 				thumbnail: 'img/guam.png',
@@ -158,7 +158,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '美國關島政府宣傳旅遊網站，負責前端開發，包含頁面製作、動態效果、資料串接'
 		}, {
-				name: '麗緻餐旅集團官方網站',
+				name: '2015 麗緻餐旅集團官方網站',
 				url: 'http://www.landishotelsresorts.com/',
 				show: true,
 				thumbnail: 'img/landis.png',
@@ -166,7 +166,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '負責前端開發，包含頁面製作、動態效果、功能應用'
 		}, {
-				name: '亞緻餐飲官方網站',
+				name: '2015 亞緻餐飲官方網站',
 				url: 'http://www.lizdining.com/',
 				show: true,
 				thumbnail: 'img/lizgroup.png',
@@ -184,9 +184,9 @@ var data = {
 				bgSize: 'inherit',
 				jobtitle: ['前端', '設計'],
 				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '負責視覺設計、前端開發、動態效果製作'
+				content: '負責視覺設計、前端開發、動態效果製作。當時為了在 iPad 上也能運行，將原先客戶期望使用 Flash 改用 HTML5/CSS3。網站呈現當時獲得英國總部認可。'
 		}, {
-				name: '七福廣告官方網站',
+				name: '2015 七福廣告官方網站',
 				url: 'http://www.chiefadv.com/',
 				show: true,
 				thumbnail: 'img/chief.png',
@@ -196,15 +196,15 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '負責前端開發，包含頁面製作、動態效果'
 		}, {
-				name: '逗點設計官方網站',
+				name: '2012 逗點設計官方網站',
 				//url: 'http://www.dotted.com.tw/',
 				show: false,
 				thumbnail: 'img/dotted.png',
 				jobtitle: ['全端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'PHP'],
+				tech: ['HTML', 'CSS', 'Javascript', 'PHP', 'MySQL'],
 				content: '負責全站開發，包含頁面製作、動態效果、資料串接、後台開發'
 		}, {
-				name: 'Circles 商務社群網站',
+				name: '2015 Circles 商務社群網站',
 				url: 'https://www.circles.tw/',
 				show: false,
 				thumbnail: 'img/circles.png',
@@ -214,7 +214,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'RWD'],
 				content: '負責前端開發，包含頁面製作、資料串接、功能應用'
 		}, {
-				name: '遊戲橘子官方網站',
+				name: '2015 遊戲橘子官方網站',
 				url: 'http://www.gamania.com/',
 				show: true,
 				thumbnail: 'img/gamania.png',
@@ -232,7 +232,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue', 'RWD'],
 				content: '負責需求訪談、前端規劃與開發，包含頁面製作、動態效果、資料串接與處理、功能應用'
 		}, {
-				name: '臺北渣打公益馬拉松',
+				name: '2017 臺北渣打公益馬拉松',
 				url: 'http://scbmarathon.com/',
 				show: false,
 				thumbnail: 'img/scbmarathon.png',
@@ -266,7 +266,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
-				name: '跑客幫網站',
+				name: '2014 跑客幫網站',
 				url: 'https://bring4u.tw/',
 				show: false,
 				thumbnail: 'img/bring4u.png',
@@ -274,7 +274,7 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '獨自一人負責所有網站前端開發，包含頁面製作、功能應用、串接API'
 		}, {
-				name: '台灣舉手網絡協會（新版製作，尚未上線）',
+				name: '2018 台灣舉手網絡協會（新版製作，尚未上線）',
 				thumbnail: 'img/liftinghands.png',
 				url: 'http://tw.liftinghands.net/',
 				show: false,
@@ -282,14 +282,14 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，包含頁面製作、功能應用、串接API等'
 		}, {
-				name: 'Marilyn 官方網站與管理系統',
+				name: '2018 Marilyn 官方網站與管理系統',
 				thumbnail: 'img/marilyn.png',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，後台介面製作、功能應用、資料計算'
 		}, {
-				name: '台北捷運 MOTA 系統',
+				name: '2014 台北捷運 MOTA 系統',
 				thumbnail: 'img/mota.jpeg',
 				show: false,
 				jobtitle: ['前端'],
@@ -305,8 +305,8 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Vue3/Nuxt3', 'RWD', 'Tailwind', 'MongoDB', 'Leaflet'],
-			content: '將台灣山岳與基石資料彙整，可隨時查閱與地圖瀏覽。同時可查詢日出日落時間、距離計算、座標轉換、坡度概算等等功能'
+			tech: ['HTML', 'CSS', 'Javascript', 'Vue3/Nuxt3', 'RWD', 'Tailwind', 'MongoDB', 'Leaflet', 'Docker'],
+			content: '持續更新中：將台灣山岳與基石資料彙整，可隨時查閱與地圖瀏覽。同時可查詢日出日落時間、距離計算、座標轉換、坡度概算等等功能'
 		},
 		{
 			name: '山岳回報平台',
@@ -314,8 +314,8 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet'],
-			content: '讓山友可回報山岳與基石狀況，同時同步更新於台灣山岳'
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet', 'Docker'],
+			content: '持續更新中：讓山友可回報山岳與基石狀況，同時同步更新於台灣山岳'
 		},
 		{
 			name: 'Tari',
@@ -323,8 +323,8 @@ var data = {
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet'],
-			content: '讓山友可回報宿營地、水源、路況等資訊，讓準備上山的山友們行前準備可獲得更完善的資訊與規劃，進而降低登山風險。'
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB', 'Leaflet', 'Docker'],
+			content: '開發中：讓山友可回報宿營地、水源、路況等資訊，讓準備上山的山友們行前準備可獲得更完善的資訊與規劃，進而降低登山風險。'
 		},
 		{
 			name: 'GPX CONCAT',
@@ -332,7 +332,7 @@ var data = {
 			show: true,
 			thumbnail: 'img/gpxconcat.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Leaflet'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Leaflet', 'Docker'],
 			content: '用於彙整不同GPS軌跡檔案，支援 GPX, KML, KMZ 等格式，並且可重新整合、新增據點、匯出檔案。符合 GPX 1.1 規範。'
 		},
 		{
