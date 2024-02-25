@@ -1,6 +1,51 @@
 var data = {
 	projects: [
 		{
+				name: '凱盟電輔車',
+				//url: 'https://www.ionex.com.tw/',
+				show: true,
+				thumbnail: 'img/kynamic.png',
+				jobtitle: ['專案協調'],
+				tech: ['專案規劃與協調'],
+				content: '專案執行中。製作使用者、經銷商、組裝廠三方專用 APP，以及資料管理平台，紀錄每批號車次的組件組成、組裝進度、保固狀態、使用者騎乘紀錄等綜合資訊。'
+		},
+		{
+				name: '威合威務 ERP 系統',
+				//url: 'https://www.ionex.com.tw/',
+				show: true,
+				thumbnail: 'img/edgenta.png',
+				jobtitle: ['前端'],
+				tech: ['HTML', 'Element UI', 'Tailwind', 'Vue3/Nuxt3', 'Pinia', 'Docker', 'Nginx'],
+				content: '專案執行中。客戶內部專屬 ERP 系統，用以紀錄產品、料件進出貨狀態以及款項紀錄。'
+		}, 
+		{
+				name: '中華汽車充電樁系統',
+				//url: 'https://www.cvc.com.tw/',
+				show: true,
+				thumbnail: 'img/cvc.png',
+				jobtitle: ['前端', '產品系統規劃'],
+				tech: [],
+				content: '專案規劃中。建置充電場域，並且整合充電樁、地鎖硬體，讓使用者可以預訂停車與充電服務。'
+		},
+		{
+				name: '飛達旅遊',
+				//url: 'https://www.ionex.com.tw/',
+				show: true,
+				thumbnail: 'img/gobytrain.png',
+				jobtitle: ['前端', '產品系統規劃'],
+				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Docker', 'Nginx'],
+				content: '專案執行中。飛達旅遊網站改版，整合 ERP 產品資料與網站資料，使用前後端分離技術與串接 API，讓使用者可在網站上購買旅遊通行證、火車票、旅遊行程等等。'
+		},
+		{
+				name: '昇恆昌官網',
+				url: 'https://everrich.begonia-design.tw/',
+				show: true,
+				thumbnail: 'img/everrich.png',
+				jobtitle: ['前端', '產品系統規劃'],
+				tech: ['HTML', 'CSS', 'Tailwind', 'SASS', 'Javascript', 'Vue3/Nuxt3', 'Pinia', 'Docker', 'Nginx'],
+				content: '專案執行中。改版原有官網，並且搭配 Redis 降低後端負擔。使用 Nuxt 3 進行前後端分離，並且使用 Docker 封裝。'
+		},
+		{
 				name: '光陽 Ionex 台灣官方網站',
 				url: 'https://www.ionex.com.tw/',
 				show: true,
@@ -14,7 +59,7 @@ var data = {
 				show: true,
 				thumbnail: 'img/ionex.png',
 				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD'],
+				tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'GSAP'],
 				content: '光陽電動車國際宣傳網站。獨自一人開發，協助設計師規劃設計 Guideline，讓設計元素組件化。使用 Vue 與 Nuxt 框架，所有前端開發，包含頁面製作、API 串接、資料計算、功能操作等'
 		}, {
 				name: '光陽 Ionex 據點服務',
@@ -215,20 +260,10 @@ var data = {
 		}, {
 				name: 'Mediplus 官方網站',
 				thumbnail: 'img/mediplus.png',
-				url: 'https://www.mediplus.tw/',
+				//url: 'https://www.mediplus.tw/',
 				show: false,
 				jobtitle: ['前端'],
 				tech: ['HTML', 'CSS', 'Javascript', 'Vue'],
-				content: '負責前端開發，包含頁面製作、功能應用'
-		}, {
-				name: '三槍官方網站',
-				url: 'https://www.3gun.com.tw/',
-				show: false,
-				thumbnail: 'img/3gun.png',
-				bgColor: '#FFF',
-				bgSize: 'inherit',
-				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，包含頁面製作、功能應用'
 		}, {
 				name: 'Hermin 官方網站',
@@ -265,20 +300,6 @@ var data = {
 				tech: ['HTML', 'CSS', 'Javascript'],
 				content: '負責前端開發，包含頁面製作、功能應用、串接API等'
 		}, {
-				name: '誠品 ESLITE Gallery',
-				thumbnail: 'img/eslite.png',
-				show: false,
-				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '誠品週年紀念影像展覽。負責前端開發，包含頁面製作、功能應用'
-		}, {
-				name: 'Buyble 官方網站',
-				thumbnail: 'img/buyble.png',
-				show: false,
-				jobtitle: ['前端'],
-				tech: ['HTML', 'CSS', 'Javascript'],
-				content: '官方網站製作，負責前端開發，包含頁面製作、功能應用'
-		}, {
 				name: 'Marilyn 官方網站與管理系統',
 				thumbnail: 'img/marilyn.png',
 				show: false,
@@ -298,12 +319,30 @@ var data = {
 	sides: [
 		{
 			name: '台灣山岳',
-			url: 'https://mt.kei.tw/',
+			url: 'https://taiwan.suann.net/',
 			show: true,
 			thumbnail: 'img/mountain.png',
 			jobtitle: ['開發者'],
-			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Vue3/Nuxt3', 'RWD', 'Tailwind', 'MongoDB'],
 			content: '將台灣山岳與基石資料彙整，可隨時查閱與地圖瀏覽。同時可查詢日出日落時間、距離計算、座標轉換、坡度概算等等功能'
+		},
+		{
+			name: '山岳回報平台',
+			url: 'https://mdr.suann.net/',
+			show: true,
+			thumbnail: 'img/mountain.png',
+			jobtitle: ['開發者'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB'],
+			content: '讓山友可回報山岳與基石狀況，同時同步更新於台灣山岳'
+		},
+		{
+			name: 'Tari',
+			//url: 'https://tari.suann.net/',
+			show: true,
+			thumbnail: 'img/mountain.png',
+			jobtitle: ['開發者'],
+			tech: ['HTML', 'CSS', 'Javascript', 'Nuxt', 'RWD', 'Tailwind', 'Firebase', 'MongoDB'],
+			content: '讓山友可回報宿營地、水源、路況等資訊，讓準備上山的山友們行前準備可獲得更完善的資訊與規劃，進而降低登山風險。'
 		},
 		{
 			name: 'Kule Lazy 4',
