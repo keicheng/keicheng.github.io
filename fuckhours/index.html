@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-device="desktop">
+	<head>
+		<!--Base Meta Start-->
+        <meta http-equiv="Content-Type" charset="utf-8" >
+        <meta http-equiv="Content-Language" content="zh-TW" >
+        <meta name="robots" content="all" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Kei™/kei.tw" >
+        <meta name="distribution" content="Taiwan">
+        <meta name="description" content="工時跟收入並不一定成正比，也不會跟競爭力成正比，更不會因為工時低企業就會貧窮。如果工時高就一定會有競爭力的話，以後都不要放假全都去上班拼競爭力啊 XD。" >
+
+        <meta property="fb:app_id" content="1811641519057613">
+        <meta property="og:title" content="來看看自己的工時與薪資符合哪國人，Dochi!">
+        <meta property="og:type" content="Website">
+        <meta property="og:url" content="http://keicheng.github.io/fuckhours/index.html">
+        <meta property="og:image" content="http://keicheng.github.io/fuckhours/fb-cover.jpg">
+        <meta property="og:site_name" content="來看看自己的工時與薪資符合哪國人？">
+        <meta property="og:description" content="僅參考看看、哭笑不得就好。工時跟收入並不一定成正比，也不會跟競爭力成正比，更不會因為工時低企業就會貧窮。如果工時高就一定會有競爭力的話，以後都不要放假全都去上班拼競爭力啊 XD。">
+
+        <title>來看看自己的工時與薪資符合哪國人，Dochi!</title>
+        <!--Base Meta End-->
+        <!--CSS-->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.161002/css/kule-lazy.min.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/kule.lazy/3.1.161002/css/kule-theme-default.min.css" />
+        <link rel="stylesheet" href="css/fuckhours.css">
+	</head>
+	<body>
+        <div id="app">
+            <h2 class="align-center text-primary">Dochi? <small>來看看自己的工時與薪資符合哪國人？ </small></h2>
+            <p class="align-center text-note">僅參考看看、哭笑不得就好</p>
+            <select class="ctrl-input" @change="showData" v-model="countrySelect">
+                <option value="">請選擇</option>
+                <option v-for="(v, key) in select" :value="key">{{v.country}}</option>
+            </select>
+            <div class="color-note">
+                <span class="note-error">比台灣糟</span>
+                <span class="note-warning">一樣糟糕</span>
+                <span class="note-success">比台灣好</span>
+            </div>
+            <table id="myTable" class="table table-striped table-outline table-responsive" :class="sorting">
+                <thead>
+                    <tr class="thr">
+                        <th>#</th>
+                        <th width="114" @click="sortable('eng')">國家</th>
+                        <th @click="sortable('year')">工時資料<br/><small>年份/排名</small></th>
+                        <th @click="sortable('hours')">工時</th>
+                        <th @click="sortable('hoursOfDay')">單日<br /><small>平均工時</small></th>
+                        <th @click="sortable('gni')">人均<br/>收入</th>
+                        <th @click="sortable('hourly')">時薪</th>
+                        <th @click="sortable('pvd')">年假</th>
+                        <th @click="sortable('pph')">國定<br/>假日</th>
+                        <th @click="sortable('vacations')">假日<br/>總數</th>
+                        <th @click="sortable('taxMin')">最低<br/>稅率</th>
+                        <th @click="sortable('taxMax')">最高<br/>稅率</th>
+                        <th @click="sortable('col')">生活成<br/>本指數</th>
+                        <th @click="sortable('rent')">租金<br/>指數</th>
+                        <th @click="sortable('lppi')">消費力<br/>指數</th>
+                    </tr>
+                </thead>
+                <tbody class="cells">
+                    <tr class="active" v-for="(v, key) in country">
+                        <td class="hide-xs">{{key + 1}}</td>
+                        <td data-label="國家">{{v.country}} <br class="hide-xs"/><small>{{v.eng}}</small></td>
+                        <td data-label="工時資料年份">{{v.year}} <br class="hide-xs"/><small>{{v.rank}}</small></td>
+                        <td data-label="工時(工時排名)" :class="(tw.hours >= v.hours) ? ((tw.hours > v.hours) ? 'success' : 'warning') : 'error'">{{moneyFormat(v.hours)}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round(v.hours - tw.hours) : ''}}</small></td>
+                        <td data-label="單日平均工時" :class="((tw.hoursOfDay >= v.hoursOfDay) ? ((tw.hoursOfDay > v.hoursOfDay)? 'success' : 'warning') : 'error')">{{v.hoursOfDay}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.hoursOfDay - tw.hoursOfDay) * 10) / 10 : ''}}</small></td>
+                        <td data-label="人均收入(NTD)" :class="((tw.gni >= v.gni) ? ((tw.gni > v.gni) ? 'error' : 'warning') : 'success')">{{moneyFormat(Math.round(v.gni * exchangeRate))}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? moneyFormat(Math.round((v.gni - tw.gni) * exchangeRate)) : ''}}</small></td>
+                        <td data-label="時薪(NTD)" :class="((tw.hourly >= v.hourly) ? ((tw.hourly > v.hourly) ? 'error' : 'warning') : 'success')">{{moneyFormat(Math.round(v.hourly * exchangeRate))}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.hourly - tw.hourly) * exchangeRate) : ''}}</small></td>
+                        <td data-label="年假天數" :class="((tw.pvd >= v.pvd) ? ((tw.pvd > v.pvd) ? 'error' : 'warning') : 'success')">{{v.pvd}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? (v.pvd - tw.pvd) : ''}}</small></td>
+                        <td data-label="國定假日" :class="((tw.pph >= v.pph) ? ((tw.pph > v.pph) ? 'error' : 'warning') : 'success')">{{v.pph}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? (v.pph - tw.pph) : ''}}</small></td>
+                        <td data-label="假日總數" :class="((tw.vacations >= v.vacations) ? ((tw.vacations > v.vacations) ? 'error' : 'warning') : 'success')">{{v.vacations}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? (v.vacations - tw.vacations) : ''}}</small></td>
+                        <td data-label="最低稅率" :class="((tw.taxMin >= v.taxMin) ? ((tw.taxMin > v.taxMin) ? 'success' : 'warning') : 'error')">{{v.taxMin}}% <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.taxMin - tw.taxMin) * 100) / 100 + '%' : ''}}</small></td>
+                        <td data-label="最高稅率" :class="((tw.taxMax >= v.taxMax) ? ((tw.taxMax > v.taxMax) ? 'success' : 'warning') : 'error')">{{v.taxMax}}% <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.taxMax - tw.taxMax) * 100) / 100 + '%' : ''}}</small></td>
+                        <td data-label="生活成本指數" :class="((tw.col >= v.col) ? ((tw.col > v.col) ? 'success' : 'warning') : 'error')">{{v.col}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.col - tw.col) * 100) / 100 : ''}}</small></td>
+                        <td data-label="租金指數" :class="((tw.rent >= v.rent) ? ((tw.rent > v.rent) ? 'success' : 'warning') : 'error')">{{v.rent}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.rent - tw.rent) * 100) / 100 : ''}}</small></td>
+                        <td data-label="消費力指數" :class="((tw.lppi >= v.lppi) ? ((tw.lppi > v.lppi) ? 'error' : 'warning') : 'success')">{{v.lppi}} <br class="hide-xs"/><small>{{(v.eng !== 'Taiwan') ? Math.round((v.lppi - tw.lppi) * 100) / 100 : ''}}</small></td>
+                    </tr>
+                </tbody>
+                <tfoot class="hide-xs">
+                    <tr class="mom-im-here">
+                        <td class="hide-xs">#</td>
+                        <td data-label="國家">{{tw.country}} <br class="hide-xs"/><small>{{tw.eng}}</small></td>
+                        <td data-label="工時資料年份">{{tw.year}} <br class="hide-xs"/><small>({{tw.rank}})</small></td>
+                        <td data-label="工時(工時排名)">{{moneyFormat(tw.hours)}}</td>
+                        <td data-label="單日平均工時">{{tw.hoursOfDay}}</td>
+                        <td data-label="人均收入(NTD)">{{moneyFormat(Math.round(tw.gni * exchangeRate))}}</td>
+                        <td data-label="時薪(NTD)">{{moneyFormat(Math.round(tw.hourly * exchangeRate))}}</td>
+                        <td data-label="年假天數">{{tw.pvd}}</td>
+                        <td data-label="國定假日">{{tw.pph}}</td>
+                        <td data-label="假日總數">{{tw.vacations}}</td>
+                        <td data-label="最低稅率">{{tw.taxMin}}%</td>
+                        <td data-label="最高稅率">{{tw.taxMax}}%</td>
+                        <td data-label="生活成本指數">{{tw.col}}</td>
+                        <td data-label="租金指數">{{tw.rent}}</td>
+                        <td data-label="消費力指數">{{tw.lppi}}</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <table id="twTable" class="table table-striped table-outline table-responsive">
+                <thead>
+                    <tr class="thr invisible">
+                        <th>#</th>
+                        <th width="114">國家</th>
+                        <th>工時<br/><small>資料年份</small></th>
+                        <th>工時<br/><small>(工時排名)</small></th>
+                        <th>單日<br /><small>平均工時</small></th>
+                        <th>人均<br/>收入</th>
+                        <th>時薪</th>
+                        <th>年假</th>
+                        <th>國定<br/>假日</th>
+                        <th>假日<br/>總數</th>
+                        <th>最低<br/>稅率</th>
+                        <th>最高<br/>稅率</th>
+                        <th>生活成<br/>本指數</th>
+                        <th>租金<br/>指數</th>
+                        <th>消費力<br/>指數</th>
+                    </tr>
+                </thead>
+                <tbody class="cells">
+                    <tr class="mom-im-here">
+                        <td class="hide-xs">#</td>
+                        <td data-label="國家">{{tw.country}} <br class="hide-xs"/><small>{{tw.eng}}</small></td>
+                        <td data-label="工時資料年份">{{tw.year}} <br class="hide-xs"/><small>({{tw.rank}})</small></td>
+                        <td data-label="工時(工時排名)">{{moneyFormat(tw.hours)}}</td>
+                        <td data-label="單日平均工時">{{tw.hoursOfDay}}</td>
+                        <td data-label="人均收入(NTD)">{{moneyFormat(Math.round(tw.gni * exchangeRate))}}</td>
+                        <td data-label="時薪(NTD)">{{moneyFormat(Math.round(tw.hourly * exchangeRate))}}</td>
+                        <td data-label="年假天數">{{tw.pvd}}</td>
+                        <td data-label="國定假日">{{tw.pph}}</td>
+                        <td data-label="假日總數">{{tw.vacations}}</td>
+                        <td data-label="最低稅率">{{tw.taxMin}}%</td>
+                        <td data-label="最高稅率">{{tw.taxMax}}%</td>
+                        <td data-label="生活成本指數">{{tw.col}}</td>
+                        <td data-label="租金指數">{{tw.rent}}</td>
+                        <td data-label="消費力指數">{{tw.lppi}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn" :class="btnDisplay" @click="restore">還原資料</a>
+            <br />
+            <h6>參考資料：</h6>
+            <ul class="kui-list">
+                <li><a href="https://data.oecd.org/emp/hours-worked.htm" target="_blank">OECD - Hours worked</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Working_time">Working time - Wiki</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/List_of_countries_by_GNI_(nominal,_Atlas_method)_per_capita" target="_blank">List of countries by GNI (nominal, Atlas method) per capita - Wiki</a></li>
+                <li><a href="https://goo.gl/WQ7ai0" target="_blank">各國人均國民總收入列表 - Wiki</a></li>
+                <li><del>資</del><a href="http://www.mol.gov.tw/" target="_blank">勞動部官方網站</a></li>
+                <li><del>資</del><a href="https://www.facebook.com/mol.labor/posts/1181235181933768" target="_blank">勞動部 Facebook</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/List_of_minimum_annual_leave_by_country" target="_blank">List of minimum annual leave by country - Wiki</a></li>
+                <li><a href="https://goo.gl/aSpgSF" target="_blank">2013 全球各地假期天數</a></li>
+                <li><a href="http://www.dniwolne.eu/" target="_blank">假期及公众假期</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/List_of_countries_by_tax_rates" target="_blank">List of countries by tax rates</a></li>
+                <li><a href="https://www.numbeo.com/cost-of-living/rankings_by_country.jsp" target="_blank">Cost of Living Index for Country 2016 Mid Year</a></li>
+                <li>美金匯率：{{exchangeRate}}</li>
+                <li>假日總數計算方式為：預設週休二日、一年52週共有 104 天，以國定假日不重疊的情況下(反正在台灣大多也會補假)，年假 + 國定假日 + 104天</li>
+            </ul>
+        </div>
+        <hr />
+        <div class="social clearfix">
+            <div class="fb-like" data-href="http://keicheng.github.io/fuckhours/index.html" data-width="360" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        </div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.8&appId=176827449338698";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1811641519057613',
+              xfbml      : true,
+              version    : 'v2.8'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+
+        <!--Javascript-->
+        <script src="js/data.js"></script>
+        <script src="https://unpkg.com/vue@2.1.4/dist/vue.js"></script>
+        <script src="js/vue.js"></script>
+	</body>
+</html>
